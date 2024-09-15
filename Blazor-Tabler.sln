@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.Tabler", "Blazor.Tabler\Blazor.Tabler.csproj", "{7E2EF419-635F-4EF6-9748-D98E5D6CD2FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.Tabler.Client", "Blazor.Tabler.Client\Blazor.Tabler.Client.csproj", "{C5D482FC-30CF-4F65-B8AC-A12D4E64D1A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E2EF419-635F-4EF6-9748-D98E5D6CD2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2EF419-635F-4EF6-9748-D98E5D6CD2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2EF419-635F-4EF6-9748-D98E5D6CD2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2EF419-635F-4EF6-9748-D98E5D6CD2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D482FC-30CF-4F65-B8AC-A12D4E64D1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D482FC-30CF-4F65-B8AC-A12D4E64D1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D482FC-30CF-4F65-B8AC-A12D4E64D1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D482FC-30CF-4F65-B8AC-A12D4E64D1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

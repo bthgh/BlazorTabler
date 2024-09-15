@@ -1,0 +1,33 @@
+@namespace Blazor.Tabler
+
+<div class="card @CardClasses">
+    @ChildContent
+    @Status?.colors.GetDescription()
+    @Status?.LastName
+    @Status?.Age.ToString()
+    
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool IsBorderless { get; set; }
+    [Parameter] public bool IsActive { get; set; }
+    [Parameter] public bool IsInActive { get; set; }
+    [Parameter] public bool RotateLeft { get; set; }
+    [Parameter] public bool RotateRight { get; set; }
+    [Parameter] public CardBackgroundColors? BackgroundColors { get; set; }
+    [Parameter] public (CardBackgroundColors colors, string LastName, int Age)? Status { get; set; }
+    
+     private string CardClasses => 
+         string.Concat(
+          IsBorderless ? "card-borderless" : "",
+          IsActive ? "card-active" : "", 
+          IsInActive ? "card-inactive" : "", 
+          RotateLeft ? "card-rotate-left" : "", 
+          RotateRight ? "card-rotate-right" : "",
+          BackgroundColors is not null ? BackgroundColors.GetDescription() : ""
+          )
+          .Trim();
+ 
+    
+}

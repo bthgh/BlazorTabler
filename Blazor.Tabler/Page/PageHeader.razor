@@ -1,0 +1,37 @@
+@namespace Blazor.Tabler
+<!-- Page header -->
+<div class="page-header d-print-none">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col">
+                @if (!string.IsNullOrEmpty(PreTitle))
+                {
+                    <!-- Page pre-title -->
+                    <div class="page-pretitle">
+                        @PreTitle
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(Title))
+                {
+                    <h2 class="page-title">
+                        @Title
+                    </h2>
+                }
+            </div>
+            @if (PageAction is not null)
+            {
+                <!-- Page title actions -->
+                <div class="col-auto ms-auto d-print-none">
+                    @PageAction
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? PreTitle { get; set; }
+    [Parameter] public RenderFragment? PageAction { get; set; }
+}

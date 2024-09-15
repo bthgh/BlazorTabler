@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.idea.Blazor-Tabler.iml
+/modules.xml
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
+.idea/
+
+# Mac files
+*.DS_Store
+.AppleDouble
+.LSOverride

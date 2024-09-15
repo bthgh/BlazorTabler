@@ -1,0 +1,70 @@
+@page "/Alerts"
+
+<PageHeader Title="Alerts"/>
+    <PageBody>
+        <div class="row row-cards">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Basic alerts</h2>
+                        <p class="text-secondary">Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
+                        <Alert Title="Wow! Everything worked!" Types="@AlertTypes.Success"/>
+                        <Alert Title="Uh oh, something went wrong" Types="@AlertTypes.Warning"/>
+                        <Alert Title="I'm so sorry…" Types="@AlertTypes.Danger"/>
+                        <Alert Title="Did you know?" Types="@AlertTypes.Info"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Alerts with icon</h2>
+                        <p class="text-secondary">Build on any alert by adding an optional icon.</p>
+                        <Alert Title="Wow! Everything worked!" Types="@AlertTypes.Success" ShowIcon="true"/>
+                        <Alert Title="Uh oh, something went wrong" Types="@AlertTypes.Warning" ShowIcon="true"/>
+                        <Alert Title="I'm so sorry…" Types="@AlertTypes.Danger" ShowIcon="true"/>
+                        <Alert Title="Did you know?" Types="@AlertTypes.Info" ShowIcon="true"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Dismissible alerts</h2>
+                        <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
+                        <Alert Title="Wow! Everything worked!" Types="@AlertTypes.Success" ShowIcon="true" IsDismissible="true"/>
+                        <Alert Title="Uh oh, something went wrong" Types="@AlertTypes.Warning" ShowIcon="true" IsDismissible="true"/>
+                        <Alert Title="I'm so sorry…" Types="@AlertTypes.Danger" ShowIcon="true" IsDismissible="true"/>
+                        <Alert Title="Did you know?" Types="@AlertTypes.Info" ShowIcon="true" IsDismissible="true"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Alert with a description</h2>
+                        <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
+                        <Alert Title="This is a custom alert box!" Types="@AlertTypes.Success" ShowIcon="true" Description="Your account has been saved!"/>
+                        <Alert Title="This is a custom alert box!" Types="@AlertTypes.Warning" ShowIcon="true" Description="Sorry! There was a problem with your request."/>
+                        <Alert Title="This is a custom alert box!" Types="@AlertTypes.Danger" ShowIcon="true" Description="Something went wrong. Please try again."/>
+                        <Alert Title="This is a custom alert box!" Types="@AlertTypes.Info" ShowIcon="true" Description="Here is something that you might like to know."/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Important alerts</h2>
+                        <Alert Title="Wow! Everything worked!" Types="@AlertTypes.Success" ShowIcon="true" IsDismissible="true" IsImportant="true"/>
+                        <Alert Title="Uh oh, something went wrong" Types="@AlertTypes.Warning" ShowIcon="true" IsDismissible="true" IsImportant="true"/>
+                        <Alert Title="I'm so sorry…" Types="@AlertTypes.Danger" ShowIcon="true" IsDismissible="true" IsImportant="true"/>
+                        <Alert Title="Did you know?" Types="@AlertTypes.Info" ShowIcon="true" IsDismissible="true" IsImportant="true"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </PageBody>
+
+@code {
+    
+}
