@@ -402,3 +402,8 @@ FodyWeavers.xsd
 /dataSources/
 /dataSources.local.xml
 .idea/
+
+# Mac files
+*.DS_Store
+.AppleDouble
+.LSOverride
