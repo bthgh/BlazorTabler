@@ -1,0 +1,67 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div>
+        <div class="row align-items-center">
+            @if (!string.IsNullOrEmpty(AvatarUrl))
+            {
+                <div class="col-auto">
+                    <span class="avatar" style="background-image: url(@AvatarUrl)"></span>
+                </div>
+            }
+            <div class="col">
+                @if (IsInline)
+                {
+                    if (!string.IsNullOrEmpty(Title))
+                    {
+                        <h3 class="card-title">
+                            @Title
+                            @if (!string.IsNullOrEmpty(Subtitle))
+                            {
+                                <span class="card-subtitle">@Subtitle</span>
+                            }
+                        </h3>
+                    }
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(Title))
+                    {
+                        <div class="card-title">@Title</div>
+                    }
+
+                    if (!string.IsNullOrEmpty(Subtitle))
+                    {
+                        <div class="card-subtitle">@Subtitle</div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+    @if (CardActions is not null)
+    {
+        <div class="card-actions">
+            @CardActions
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public string? AvatarUrl { get; set; }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? Subtitle { get; set; }
+    [Parameter] public bool IsLight { get; set; }
+    [Parameter] public bool IsInline { get; set; }
+    [Parameter] public RenderFragment? CardActions { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.CardHeader,
+                IsLight ? TablerClasses.CardHeaderLight : "",
+                Class
+            )
+            .Trim();
+
+}

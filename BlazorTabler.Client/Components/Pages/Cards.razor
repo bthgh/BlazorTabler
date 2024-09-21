@@ -1,0 +1,676 @@
+@page "/Cards"
+<PageHeader Title="Cards"/>
+<PageBody>
+<CardRow>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardHeader Title="Card title"/>
+        <CardBody>Simple card</CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardHeader Title="Card title" IsLight="true"/>
+        <CardBody>Card with Light header</CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card IsBorderless="true">
+        <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <div>Card without border</div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardHeader Title="Card title" Subtitle="Subtitle" IsInline="true"/>
+        <CardBody>Card with title and subtitle</CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <CardLink Href="#">
+        <CardBody>Default hover effect</CardBody>
+    </CardLink>
+</div>
+<div class="col-md-6 col-lg-3">
+    <CardLink Href="#" IsRotate="true">
+        <CardBody>Rotate hover effect</CardBody>
+    </CardLink>
+</div>
+<div class="col-md-6 col-lg-3">
+    <CardLink Href="#" IsPop="true">
+        <CardBody>Pop hover effect</CardBody>
+    </CardLink>
+</div>
+<div class="col-md-6 col-lg-3">
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card RotateRight="true">
+        <CardBody>Card rotate right</CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card RotateLeft="true">
+        <CardBody>Card rotate left</CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card IsActive="true">
+        <CardBody>
+            <p>This is a card with active state.</p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card IsInActive="true">
+        <CardBody>
+            <p>This is some text inactive state.</p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardStamp Icon="TablerSvgIcons.bell" Color="TablerColors.Yellow"/>
+        <CardBody>
+            <CardTitle>Card with icon bg</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum
+                recusandae reiciendis saepe.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card BackgroundColors="CardBackgroundColors.PrimaryLt">
+        <CardBody>
+            <CardTitle>Card with primary light background</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum
+                recusandae reiciendis saepe.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card BackgroundColors="CardBackgroundColors.Primary">
+        <CardStamp Icon="TablerSvgIcons.star" Color="TablerColors.White" TextColor="TablerTextColors.Primary"/>
+        <CardBody>
+            <CardTitle>Card with background and icon</CardTitle>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur
+                culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis
+                saepe.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardStatus Color="TablerColors.Danger" Position="CardStatusPosition.Top"/>
+        <CardBody>
+            <CardTitle>Card with top status</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardStatus Color="TablerColors.Success" Position="CardStatusPosition.Bottom"/>
+        <CardBody>
+            <CardTitle>Card with bottom status</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardStatus Color="TablerColors.Primary" Position="CardStatusPosition.Start"/>
+        <CardBody>
+            <CardTitle>Card with side status</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardRibbon Icon="TablerSvgIcons.star" Position="CardRibbonPosition.Top" Color="TablerColors.Yellow"/>
+        <CardBody>
+            <CardTitle>Card with top ribbon</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum
+                recusandae reiciendis saepe.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardRibbon Text="NEW" Position="CardRibbonPosition.End" Color="TablerColors.Red"/>
+        <CardBody>
+            <CardTitle>Card with text ribbon</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum
+                recusandae reiciendis saepe.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <CardTitle>Card with progress bar</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardProgress CurrentValue="38"/>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card IsStacked="true">
+        <CardBody>
+            <CardTitle>Stacked card</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6">
+    <CardImage
+        ImagePosition="CardImagePosition.Start"
+        ImageUrl="static/photos/beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg"
+        ImageAlt="Beautiful blonde woman relaxing with a can of coke on a tree stump by the beach">
+        <CardTitle>Card with left side image</CardTitle>
+        <p class="text-secondary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aperiam deleniti fugit
+            incidunt, iste, itaque minima
+            neque pariatur perferendis sed suscipit velit vitae voluptatem.
+        </p>
+    </CardImage>
+</div>
+<div class="col-lg-6">
+    <CardImage
+        ImagePosition="CardImagePosition.End"
+        ImageUrl="static/photos/finances-us-dollars-and-bitcoins-currency-money.jpg"
+        ImageAlt="Finances - US Dollars and Bitcoins - Currency - Money">
+        <CardTitle>Card with right side image</CardTitle>
+        <p class="text-secondary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aperiam deleniti fugit
+            incidunt, iste, itaque minima
+            neque pariatur perferendis sed suscipit velit vitae voluptatem.
+        </p>
+    </CardImage>
+</div>
+<div class="col-md-6 col-lg-3">
+    <CardImage
+        ImagePosition="CardImagePosition.Top"
+        ImageUrl="static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg">
+        <CardTitle>Card with top image</CardTitle>
+        <p class="text-secondary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aperiam deleniti fugit
+            incidunt, iste, itaque minima
+            neque pariatur perferendis sed suscipit velit vitae voluptatem.
+        </p>
+    </CardImage>
+</div>
+<div class="col-md-6 col-lg-3">
+    <CardImage
+        ImagePosition="CardImagePosition.Bottom"
+        ImageUrl="static/photos/finances-us-dollars-and-bitcoins-currency-money-2.jpg">
+        <CardTitle>Card with bottom image</CardTitle>
+        <p class="text-secondary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Aperiam deleniti fugit
+            incidunt, iste, itaque minima
+            neque pariatur perferendis sed suscipit velit vitae voluptatem.
+        </p>
+    </CardImage>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <CardTitle>Card with footer</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter>This is standard card footer</CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <CardTitle>Card with transparent footer</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter IsTransparent="true">This is transparent card footer</CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <CardTitle>Card with footer button</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <CardTitle>Card with footer buttons</CardTitle>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter>
+            <div class="d-flex">
+                <a href="#" class="btn btn-link">Cancel</a>
+                <a href="#" class="btn btn-primary ms-auto">Go somewhere</a>
+            </div>
+        </CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter>
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="#">More information</a>
+                </div>
+                <div class="col-auto ms-auto">
+                    <label class="form-check form-switch m-0">
+                        <input class="form-check-input position-static" type="checkbox" checked>
+                    </label>
+                </div>
+            </div>
+        </CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-3">
+    <Card>
+        <CardBody>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aperiam deleniti fugit incidunt, iste, itaque minima
+                neque pariatur perferendis sed suscipit velit vitae voluptatem.
+            </p>
+        </CardBody>
+        <CardFooter>
+            <div class="row align-items-center">
+                <div class="col-auto ms-auto">
+                    <div class="avatar-list avatar-list-stacked">
+                        <span class="avatar avatar-sm rounded"
+                              style="background-image: url(./static/avatars/000m.jpg)">
+                        </span>
+                        <span class="avatar avatar-sm rounded">JL</span>
+                        <span class="avatar avatar-sm rounded"
+                              style="background-image: url(./static/avatars/002m.jpg)">
+                        </span>
+                        <span class="avatar avatar-sm rounded"
+                              style="background-image: url(./static/avatars/003m.jpg)">
+                        </span>
+                        <span class="avatar avatar-sm rounded"
+                              style="background-image: url(./static/avatars/000f.jpg)">
+                        </span>
+                        <span class="avatar avatar-sm rounded">+3</span>
+                    </div>
+                </div>
+            </div>
+        </CardFooter>
+    </Card>
+</div>
+<div class="col-md-6 col-lg-4">
+    <CardTabs>
+        <CardTab Title="Tab 1" IsActive="true">
+            <Content>
+                <CardTitle>aaaaaContent of tab #1</CardTitle>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                    aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                    odit.
+                </p>
+            </Content>
+        </CardTab>
+        <CardTab Title="Tab 2">
+            <Content>
+                <CardTitle>Content of tab #2</CardTitle>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                    aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                    odit.
+                </p>
+            </Content>
+        </CardTab>
+        <CardTab Title="Tab 3">
+            <Content>
+                <CardTitle>Content of tab #3</CardTitle>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                    aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                    odit.
+                </p>
+            </Content>
+        </CardTab>
+        <CardTab Title="Tab 4">
+            <Content>
+                <CardTitle>Content of tab #4</CardTitle>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                    aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                    odit.
+                </p>
+            </Content>
+        </CardTab>
+    </CardTabs>
+</div>
+<div class="col-md-6 col-lg-4">
+     <CardTabs Position="CardTabsPosition.Bottom">
+             <CardTab Title="Tab 1" IsActive="true">
+                 <Content>
+                     <CardTitle>aaaaaContent of tab #1</CardTitle>
+                     <p class="text-secondary">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                         aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                         odit.
+                     </p>
+                 </Content>
+             </CardTab>
+             <CardTab Title="Tab 2">
+                 <Content>
+                     <CardTitle>Content of tab #2</CardTitle>
+                     <p class="text-secondary">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                         aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                         odit.
+                     </p>
+                 </Content>
+             </CardTab>
+             <CardTab Title="Tab 3">
+                 <Content>
+                     <CardTitle>Content of tab #3</CardTitle>
+                     <p class="text-secondary">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                         aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                         odit.
+                     </p>
+                 </Content>
+             </CardTab>
+             <CardTab Title="Tab 4">
+                 <Content>
+                     <CardTitle>Content of tab #4</CardTitle>
+                     <p class="text-secondary">
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, alias
+                         aliquid distinctio dolorem expedita, fugiat hic magni molestiae molestias
+                         odit.
+                     </p>
+                 </Content>
+             </CardTab>
+         </CardTabs>
+</div>
+<div class="col-12">
+    <Card>
+        <CardHeader Title="Cards inside card"/>
+        <CardBody>
+            <CardRow>
+                <div class="col-md">
+                    <Card>
+                        <CardStatus Color="TablerColors.Red" Position="CardStatusPosition.Top"/>
+                        <CardHeader Title="First card"/>
+                        <CardBody Class="p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                                 preserveAspectRatio="none" width="400" height="200"
+                                 viewBox="0 0 400 200" fill="transparent"
+                                 stroke="var(--tblr-border-color, #b8cef1)">
+                                <line x1="0" y1="0" x2="400" y2="200"></line>
+                                <line x1="0" y1="200" x2="400" y2="0"></line>
+                            </svg>
+                        </CardBody>
+                    </Card>
+                </div>
+                <div class="col-md">
+                    <Card>
+                        <CardStatus Color="TablerColors.Green" Position="CardStatusPosition.Top"/>
+                        <CardHeader Title="Second card"/>
+                        <CardBody Class="p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                                 preserveAspectRatio="none" width="400" height="200"
+                                 viewBox="0 0 400 200" fill="transparent"
+                                 stroke="var(--tblr-border-color, #b8cef1)">
+                                <line x1="0" y1="0" x2="400" y2="200"></line>
+                                <line x1="0" y1="200" x2="400" y2="0"></line>
+                            </svg>
+                        </CardBody>
+                    </Card>
+                </div>
+                <div class="col-md">
+                    <Card>
+                        <CardStatus Color="TablerColors.Blue" Position="CardStatusPosition.Top"/>
+                        <CardHeader Title="Third card"/>
+                        <CardBody Class="p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                                 preserveAspectRatio="none" width="400" height="200"
+                                 viewBox="0 0 400 200" fill="transparent"
+                                 stroke="var(--tblr-border-color, #b8cef1)">
+                                <line x1="0" y1="0" x2="400" y2="200"></line>
+                                <line x1="0" y1="200" x2="400" y2="0"></line>
+                            </svg>
+                        </CardBody>
+                    </Card>
+                </div>
+            </CardRow>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-12">
+    <CardGroup>
+        <Card>
+            <CardHeader Title="First card"/>
+            <CardBody Class="p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                     preserveAspectRatio="none" width="400" height="200"
+                     viewBox="0 0 400 200" fill="transparent"
+                     stroke="var(--tblr-border-color, #b8cef1)">
+                    <line x1="0" y1="0" x2="400" y2="200"></line>
+                    <line x1="0" y1="200" x2="400" y2="0"></line>
+                </svg>
+            </CardBody>
+        </Card>
+        <Card>
+            <CardHeader Title="Second card"/>
+            <CardBody Class="p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                     preserveAspectRatio="none" width="400" height="200"
+                     viewBox="0 0 400 200" fill="transparent"
+                     stroke="var(--tblr-border-color, #b8cef1)">
+                    <line x1="0" y1="0" x2="400" y2="200"></line>
+                    <line x1="0" y1="200" x2="400" y2="0"></line>
+                </svg>
+            </CardBody>
+        </Card>
+        <Card>
+            <CardHeader Title="Third card"/>
+            <CardBody Class="p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-100"
+                     preserveAspectRatio="none" width="400" height="200"
+                     viewBox="0 0 400 200" fill="transparent"
+                     stroke="var(--tblr-border-color, #b8cef1)">
+                    <line x1="0" y1="0" x2="400" y2="200"></line>
+                    <line x1="0" y1="200" x2="400" y2="0"></line>
+                </svg>
+            </CardBody>
+        </Card>
+    </CardGroup>
+</div>
+<div class="col-12">
+    <CardRow IsRowDeck="true">
+        <div class="col">
+            <Card>
+                <CardHeader Title="Card title"/>
+                <CardBody>
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit longer.
+                </CardBody>
+                <CardFooter>
+                    Last updated 3 mins ago
+                </CardFooter>
+            </Card>
+        </div>
+        <div class="col">
+            <Card>
+                <CardHeader Title="Card title"/>
+                <CardBody>
+                    This card has supporting text below as a natural lead-in to
+                    additional content.
+                </CardBody>
+                <CardFooter>
+                    Last updated 3 mins ago
+                </CardFooter>
+            </Card>
+        </div>
+        <div class="col">
+            <Card>
+                <CardHeader Title="Card title"/>
+                <CardBody>
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This card has even longer content than the first
+                    to show that equal height action.
+                </CardBody>
+                <CardFooter>
+                    Last updated 3 mins ago
+                </CardFooter>
+            </Card>
+        </div>
+    </CardRow>
+</div>
+<div class="col-lg-4">
+    <CardEmpty ImageUrl="static/illustrations/undraw_quitting_time_dm8t.svg"
+               Title="No results found"
+               SubTitle="Try adjusting your search or filter to find what you're looking for.">
+        <Actions>
+            <a href="#" class="btn btn-primary">
+                <SvgIcon Icon="TablerSvgIcons.search"></SvgIcon>
+                Search again
+            </a>
+        </Actions>
+    </CardEmpty>
+</div>
+<div class="col-lg-4">
+    <Card>
+        <CardBody>
+            <div class="mb-3">
+                <div class="form-label">Card number</div>
+                <input type="text" name="input-mask" class="form-control"
+                       data-mask="0000 0000 0000 0000" data-mask-visible="true"
+                       placeholder="0000 0000 0000 0000" autocomplete="off"/>
+            </div>
+            <div class="mb-3">
+                <div class="form-label">Card name</div>
+                <input type="text" class="form-control">
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="mb-3">
+                        <label class="form-label">Expiration date</label>
+                        <div class="row g-2">
+                            <div class="col">
+                                <select class="form-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-select">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="form-label">CVV</div>
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <a href="#" class="btn btn-primary w-100">
+                    Pay now
+                </a>
+            </div>
+        </CardBody>
+    </Card>
+</div>
+</CardRow>
+</PageBody>
+
+@code {
+
+}

@@ -1,0 +1,8 @@
+@namespace BlazorTabler
+<div class="page-wrapper">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

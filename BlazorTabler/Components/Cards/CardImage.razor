@@ -1,0 +1,60 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+@if (ImagePosition is CardImagePosition.Start or CardImagePosition.End)
+{
+    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+        <div class="row row-0">
+            <div class="col-3 @(ImagePosition == CardImagePosition.End ? "order-md-last" : "")">
+                <!-- Photo -->
+                <img src="@ImageUrl"
+                     class="w-100 h-100 object-cover  @(ImagePosition == CardImagePosition.End ? "card-img-end" : "card-img-start")"
+                     alt="@ImageAlt"/>
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    @ChildContent
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (ImagePosition is CardImagePosition.Top)
+{
+    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+        <!-- Photo -->
+        <div class="img-responsive img-responsive-21x9 card-img-top"
+             style="background-image: url(@ImageUrl)">
+        </div>
+        <div class="card-body">
+            @ChildContent
+        </div>
+    </div>
+}
+else if (ImagePosition is CardImagePosition.Bottom)
+{
+    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+        <div class="card-body">
+            @ChildContent
+        </div>
+        <!-- Photo -->
+        <div class="img-responsive img-responsive-21x9 card-img-bottom"
+             style="background-image: url(@ImageUrl)">
+        </div>
+    </div>
+}
+
+
+@code {
+    [Parameter] public required string ImageUrl { get; set; }
+    [Parameter] public string ImageAlt { get; set; } = string.Empty;
+    [Parameter] public CardImagePosition ImagePosition { get; set; } = CardImagePosition.Top;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Card,
+                Class
+            )
+            .Trim();
+}

@@ -1,0 +1,11 @@
+@namespace BlazorTabler
+<!-- Page body -->
+<div class="page-body">
+    <div class="container-xl">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

@@ -1,0 +1,44 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div class="empty">
+        @if (!string.IsNullOrEmpty(ImageUrl))
+        {
+            <div class="empty-img">
+                        <img src="@ImageUrl" height="128" alt="">
+                    </div>
+        }
+        @if (!string.IsNullOrEmpty(Title))
+        {
+            <p class="empty-title">@Title</p>
+        }
+        @if (!string.IsNullOrEmpty(SubTitle))
+                {
+                    <p class="empty-subtitle text-secondary">
+                        @SubTitle
+                    </p>
+                }
+        @if (Actions is not null)
+        {
+            <div class="empty-action">
+                @Actions
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment? Actions { get; set; }
+    [Parameter] public string? ImageUrl { get; set; }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? SubTitle { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Card,
+                Class
+            )
+            .Trim();
+
+}

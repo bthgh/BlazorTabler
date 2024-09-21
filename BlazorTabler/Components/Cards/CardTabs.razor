@@ -1,0 +1,53 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<CascadingValue Value="@(this)" IsFixed="true">
+    @ChildContent
+</CascadingValue>
+
+<!-- Cards with tabs component -->
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <ul class="nav nav-tabs @(Position == CardTabsPosition.Bottom ? "nav-tabs-bottom" : "")">
+        @foreach (var item in tabs)
+        {
+            <li class="nav-item">
+                <a href="#tab-@item.Id" class="nav-link @(item.IsActive ? "active" : "")" data-bs-toggle="tab">
+                    @item.Title
+                </a>
+            </li>
+        }
+    </ul>
+    <div class="tab-content">
+        @foreach (var item in tabs)
+        {
+            <div id="tab-@item.Id" class="card tab-pane @(item.IsActive ? "active show" : "")">
+                <div class="card-body">
+                    @item.Content
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+ 
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public CardTabsPosition Position { get; set; } = CardTabsPosition.Top;
+
+
+    private List<CardTab> tabs = new();
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.CardTabs,
+                Position.GetDescription(),
+                Class
+            )
+            .Trim();
+ 
+    internal void AddTab(CardTab tab)
+    {
+        tabs.Add(tab);
+        StateHasChanged();
+    }
+}

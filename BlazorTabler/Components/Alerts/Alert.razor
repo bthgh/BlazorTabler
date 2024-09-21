@@ -1,0 +1,65 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" role="alert" @attributes="@AdditionalAttributes">
+    <div class="d-flex">
+        @if (ShowIcon)
+        {
+            <div>
+                <SvgIcon Icon="GetAlertIcon()" Class="@TablerClasses.AlertIcon"></SvgIcon>
+            </div>
+        }
+        <div>
+            @if (!string.IsNullOrEmpty(Description))
+            {
+                <h4 class="alert-title">@Title</h4>
+                <div class="text-secondary">@Description</div>
+            }
+            else
+            {
+                @Title
+            }
+        </div>
+    </div>
+    @if (IsDismissible)
+    {
+        <a class="btn-close" data-bs-dismiss="alert" aria-label="close" @onclick="HandleOnClick"></a>
+    }
+</div>
+
+@code
+{
+    //[Parameter] public string Id { get; set; } = IdUtility.GetNextId();
+    [Parameter] public bool IsImportant { get; set; }
+    [Parameter] public bool ShowIcon { get; set; }
+    [Parameter] public bool IsDismissible { get; set; }
+    [Parameter] public required string Title { get; set; }
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public AlertTypes AlertType { get; set; } = AlertTypes.Success;
+    [Parameter] public EventCallback OnDismissed { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Alert,
+                IsDismissible ? TablerClasses.AlertDismissible : "",
+                AlertType.GetDescription(),
+                IsImportant ? TablerClasses.AlertImportant : "",
+                Class
+            )
+            .Trim();
+
+    private TablerSvgIcons GetAlertIcon() =>
+        AlertType switch
+        {
+            AlertTypes.Success => TablerSvgIcons.check,
+            AlertTypes.Warning => TablerSvgIcons.alert_triangle,
+            AlertTypes.Info => TablerSvgIcons.info_circle,
+            AlertTypes.Danger => TablerSvgIcons.alert_circle,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+    private async Task HandleOnClick()
+    {
+        await OnDismissed.InvokeAsync();
+    }
+}
