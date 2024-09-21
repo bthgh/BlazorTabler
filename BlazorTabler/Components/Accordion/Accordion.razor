@@ -1,0 +1,44 @@
+@using System.Net
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<CascadingValue Value="@(this)" IsFixed="true">
+    @ChildContent
+</CascadingValue>
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    @foreach (var item in accordionItems)
+    {
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-@item.Id">
+                <button class="accordion-button @(item.IsExpanded ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@item.Id" aria-expanded="@item.IsExpanded">
+                    @item.Title
+                </button>
+            </h2>
+            <div id="collapse-@item.Id" class="accordion-collapse collapse @(item.IsExpanded?"show": "")" data-bs-parent="#@Id">
+                <div class="accordion-body pt-0">
+                      @item.Content
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private List<AccordionItem> accordionItems = new();
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Accordion,
+                Class
+            )
+            .Trim();
+ 
+    internal void AddItem(AccordionItem item)
+    {
+        accordionItems.Add(item);
+        StateHasChanged();
+    }
+}

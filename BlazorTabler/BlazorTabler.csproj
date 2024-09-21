@@ -16,7 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Components\" />
       <Folder Include="EventsArguments\" />
       <Folder Include="wwwroot\" />
     </ItemGroup>
