@@ -1,0 +1,23 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<a href="@Href" @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    @ChildContent
+</a>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool IsRotate { get; set; }
+    [Parameter] public bool IsPop { get; set; }
+    [Parameter] public required string Href { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.CardLink,
+                IsRotate ? TablerClasses.CardLinkRotate : "",
+                IsPop ? TablerClasses.CardLinkPop : "",
+                Class
+            )
+            .Trim();
+
+}

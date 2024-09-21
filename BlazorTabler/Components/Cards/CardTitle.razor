@@ -1,0 +1,9 @@
+@namespace BlazorTabler
+
+<h3 class="card-title">
+    @ChildContent
+</h3>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

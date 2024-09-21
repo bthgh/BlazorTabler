@@ -1,0 +1,18 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div  @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes"></div>
+
+@code {
+    [Parameter] public CardStatusPosition Position { get; set; } = CardStatusPosition.Top;
+    [Parameter] public TablerColors Color { get; set; } = TablerColors.Primary;
+
+    private string Classes =>
+        string.Join(" ",
+                Position.GetDescription(),
+                Color.GetDescription(),
+                Class
+            )
+            .Trim();
+
+}

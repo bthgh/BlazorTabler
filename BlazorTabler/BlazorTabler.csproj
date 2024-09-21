@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Components\" />
+      <Folder Include="EventsArguments\" />
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\Alerts\Alert.razor" />
+      <AdditionalFiles Include="Components\Cards\Card.razor" />
+      <AdditionalFiles Include="Components\Cards\CardBody.razor" />
+      <AdditionalFiles Include="Components\Cards\CardFooter.razor" />
+      <AdditionalFiles Include="Components\Cards\CardGroup.razor" />
+      <AdditionalFiles Include="Components\Cards\CardHeader.razor" />
+      <AdditionalFiles Include="Components\Cards\CardLink.razor" />
+      <AdditionalFiles Include="Components\Cards\CardStatus.razor" />
+      <AdditionalFiles Include="Components\Cards\CardTabs.razor" />
+      <AdditionalFiles Include="Components\Cards\CardTitle.razor" />
+      <AdditionalFiles Include="Components\Page\Footer.razor" />
+      <AdditionalFiles Include="Components\Page\PageBody.razor" />
+      <AdditionalFiles Include="Components\Page\PageHeader.razor" />
+      <AdditionalFiles Include="Components\Page\PageWrapper.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Alerts\Alert.razor" />
+      <UpToDateCheckInput Remove="Icons\Icon.razor" />
+      <UpToDateCheckInput Remove="Page\Footer.razor" />
+      <UpToDateCheckInput Remove="Page\PageBody.razor" />
+      <UpToDateCheckInput Remove="Page\PageHeader.razor" />
+      <UpToDateCheckInput Remove="Page\PageWrapper.razor" />
+    </ItemGroup>
+
+</Project>

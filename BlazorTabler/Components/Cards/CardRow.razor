@@ -1,0 +1,20 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool IsRowDeck { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.CardRow,
+                IsRowDeck ? TablerClasses.CardRowDeck : "",
+                Class
+            )
+            .Trim();
+
+}

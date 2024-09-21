@@ -1,0 +1,23 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div class="progress-bar" style="width: @CurrentValue%" role="progressbar" aria-valuenow="@CurrentValue"
+         aria-valuemin="@MinValue" aria-valuemax="@MaxValue" aria-label="@CurrentValue% Complete">
+        <span class="visually-hidden">38% Complete</span>
+    </div>
+</div>
+
+@code {
+    [Parameter] public int CurrentValue { get; set; } = 0;
+    [Parameter] public int MinValue { get; set; } = 0;
+    [Parameter] public int MaxValue { get; set; } = 100;
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.CardProgress,
+                Class
+            )
+            .Trim();
+
+}

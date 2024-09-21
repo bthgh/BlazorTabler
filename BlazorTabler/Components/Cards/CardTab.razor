@@ -1,0 +1,17 @@
+@using BlazorTabler.Utilities
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+@code {
+    [Parameter] public bool IsActive { get; set; }
+    [Parameter] public RenderFragment? Content { get; set; }
+    [CascadingParameter] internal CardTabs Parent { get; set; } = default!;
+    [Parameter] public string? Title { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Parent.AddTab(this);
+    }
+
+}

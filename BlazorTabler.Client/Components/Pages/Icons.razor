@@ -1,0 +1,57 @@
+@page "/icons"
+@using System.Reflection
+@inject IJSRuntime JSRuntime
+@inject IWebHostEnvironment env
+@rendermode InteractiveServer
+
+ 
+<PageHeader Title="Tabler Icons"/>
+<PageBody>
+    <Card>
+        <CardHeader Title="@header">
+            <CardActions>
+                <div class="input-icon">
+                    <span class="input-icon-addon">
+                        <SvgIcon Icon="TablerSvgIcons.zoom" />
+                    </span>
+                    <input type="text" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search..." class="form-control"/>
+                </div>
+            </CardActions>
+        </CardHeader>
+        <CardBody>
+            <div class="demo-icons-list-wrap">
+                <div class="demo-icons-list">
+                    @foreach (var item in FilteredEnumItems)
+                    {
+                        <div  rel="noopener" class="demo-icons-list-item" style="font-size: xx-large;" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="@item" data-bs-original-title="@item">
+                            <SvgIcon Icon="(TablerSvgIcons)Enum.Parse(typeof(TablerSvgIcons), item)"/>
+                        </div>
+                    }
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+
+</PageBody>
+
+
+@code {
+    private string searchTerm = string.Empty;
+    private List<string> enumItems = Enum.GetNames(typeof(TablerSvgIcons)).OrderBy(name => name).ToList();
+
+    private string header => $"Tabler Icon List( {enumItems.Count} Icons) v3.16.0";
+    private List<string> FilteredEnumItems => enumItems
+        .Where(item => string.IsNullOrWhiteSpace(searchTerm) ||
+                       item.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+        .ToList();
+ 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        { 
+                await JSRuntime.InvokeVoidAsync("eval", File.ReadAllText(Path.Combine(env.WebRootPath, "js/tabler.js")));
+             
+        }
+    }
+     
+}

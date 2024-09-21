@@ -1,0 +1,31 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    @if (!string.IsNullOrEmpty(Text))
+    {
+        @Text
+    }
+    else
+    {
+        <SvgIcon Icon="@Icon"/>
+    }
+    
+</div>
+
+@code {
+    [Parameter] public CardRibbonPosition Position { get; set; } = CardRibbonPosition.Top;
+    [Parameter] public TablerColors Color { get; set; } = TablerColors.Primary;
+    [Parameter] public TablerSvgIcons Icon { get; set; } 
+    [Parameter] public string? Text { get; set; } 
+
+    private string Classes =>
+        string.Join(" ",
+            TablerClasses.CardRibbon,
+                Position.GetDescription(),
+                Color.GetDescription(),
+                Class
+            )
+            .Trim();
+
+}
