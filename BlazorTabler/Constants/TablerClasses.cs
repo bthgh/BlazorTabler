@@ -4,6 +4,10 @@ namespace BlazorTabler.Constants;
 
 public static class TablerClasses
 {
+    //Accordion
+    public const string Accordion = "accordion";
+    
+    
     //Alert
     public const string Alert = "alert";
     public const string AlertIcon = "alert-icon";
@@ -37,6 +41,8 @@ public static class TablerClasses
     
     //Icon
     public const string Icon = "icon";
+    
+    
     
 }
 
