@@ -14,6 +14,13 @@ public static class TablerClasses
     public const string AlertDismissible = "alert-dismissible";
     public const string AlertImportant = "alert-important";
     
+    
+    //Button
+    public const string Button = "btn";
+    public const string ButtonActive = "active";
+    public const string ButtonDisabled = "disabled";
+    
+    
     //Card
     public const string Card = "card";
     public const string CardBody = "card-body";

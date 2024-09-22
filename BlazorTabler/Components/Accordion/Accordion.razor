@@ -6,7 +6,7 @@
     @ChildContent
 </CascadingValue>
 
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     @foreach (var item in accordionItems)
     {
         <div class="accordion-item">
@@ -32,7 +32,7 @@
     private string Classes =>
         string.Join(" ",
                 TablerClasses.Accordion,
-                Class
+                CssClass
             )
             .Trim();
  

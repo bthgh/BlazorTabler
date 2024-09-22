@@ -7,8 +7,8 @@ namespace BlazorTabler;
 public abstract class TablerComponentBase : ComponentBase, IDisposable, IAsyncDisposable
 {
     [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> AdditionalAttributes { get; set; } = default!;
-    [Parameter] public string? Class { get; set; }
-    [Parameter] public string? Style { get; set; }
+    [Parameter] public string? CssClass { get; set; }
+    [Parameter] public string? CssStyle { get; set; }
     [Parameter] public string? Id { get; set; }
     [Inject] protected IJSRuntime JsRuntime { get; set; } = default!;
     

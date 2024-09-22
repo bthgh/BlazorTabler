@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes" >
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" >
     <div class="card-stamp-icon @Color.GetDescription() @TextColor?.GetDescription()">
         <SvgIcon Icon="@Icon"/> 
     </div>
@@ -15,7 +15,7 @@
     private string Classes =>
         string.Join(" ",
                 TablerClasses.CardStamp,
-                Class
+                CssClass
             )
             .Trim();
 }

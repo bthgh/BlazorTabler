@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<a href="@Href" @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<a href="@Href" @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     @ChildContent
 </a>
 
@@ -16,7 +16,7 @@
                 TablerClasses.CardLink,
                 IsRotate ? TablerClasses.CardLinkRotate : "",
                 IsPop ? TablerClasses.CardLinkPop : "",
-                Class
+                CssClass
             )
             .Trim();
 
