@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     <div class="empty">
         @if (!string.IsNullOrEmpty(ImageUrl))
         {
@@ -37,7 +37,7 @@
     private string Classes =>
         string.Join(" ",
                 TablerClasses.Card,
-                Class
+                CssClass
             )
             .Trim();
 

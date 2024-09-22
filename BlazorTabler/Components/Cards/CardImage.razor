@@ -3,7 +3,7 @@
 
 @if (ImagePosition is CardImagePosition.Start or CardImagePosition.End)
 {
-    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
         <div class="row row-0">
             <div class="col-3 @(ImagePosition == CardImagePosition.End ? "order-md-last" : "")">
                 <!-- Photo -->
@@ -21,7 +21,7 @@
 }
 else if (ImagePosition is CardImagePosition.Top)
 {
-    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
         <!-- Photo -->
         <div class="img-responsive img-responsive-21x9 card-img-top"
              style="background-image: url(@ImageUrl)">
@@ -33,7 +33,7 @@ else if (ImagePosition is CardImagePosition.Top)
 }
 else if (ImagePosition is CardImagePosition.Bottom)
 {
-    <div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+    <div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
         <div class="card-body">
             @ChildContent
         </div>
@@ -54,7 +54,7 @@ else if (ImagePosition is CardImagePosition.Bottom)
     private string Classes =>
         string.Join(" ",
                 TablerClasses.Card,
-                Class
+                CssClass
             )
             .Trim();
 }

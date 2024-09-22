@@ -6,7 +6,7 @@
 </CascadingValue>
 
 <!-- Cards with tabs component -->
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     <ul class="nav nav-tabs @(Position == CardTabsPosition.Bottom ? "nav-tabs-bottom" : "")">
         @foreach (var item in tabs)
         {
@@ -41,7 +41,7 @@
         string.Join(" ",
                 TablerClasses.CardTabs,
                 Position.GetDescription(),
-                Class
+                CssClass
             )
             .Trim();
  

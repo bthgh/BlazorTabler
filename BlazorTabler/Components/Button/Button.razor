@@ -1,0 +1,46 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+@if (Type == ButtonTypes.Link)
+{
+    <a href="@Href" @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" @onclick="HandleOnClick">
+        @ChildContent
+    </a>
+}
+else
+{
+    <button @ref="@Element" type="@Type.GetDescription()" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" @onclick="HandleOnClick">
+        @ChildContent
+    </button>
+}
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool IsDisabled { get; set; }
+    [Parameter] public bool IsActive { get; set; }
+    [Parameter] public ButtonColors ButtonColor { get; set; } = ButtonColors.primary;
+    [Parameter] public ButtonStyles ButtonStyle { get; set; } = ButtonStyles.Standard;
+    [Parameter] public SvgIcon? Icon { get; set; }
+    [Parameter] public ButtonTypes Type { get; set; } = ButtonTypes.Link;
+    [Parameter] public string Href { get; set; } = string.Empty;
+    [Parameter] public EventCallback Onclick { get; set; }
+
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Button,
+                ButtonStyle.GetDescription().Replace("###",ButtonColor.GetDescription()),
+                IsActive ? TablerClasses.ButtonActive : "",
+                IsDisabled ? TablerClasses.ButtonDisabled : "",
+                "w-100",
+                CssClass
+            )
+            .Trim();
+    
+    private async Task HandleOnClick()
+    {
+        await Onclick.InvokeAsync();
+    }
+}

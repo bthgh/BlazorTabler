@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<div  @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div  @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     @ChildContent
 </div>
 
@@ -13,7 +13,7 @@
         string.Join(" ",
                 TablerClasses.CardFooter,
                 IsTransparent ? TablerClasses.CardFooterTransparent : "",
-                Class
+                CssClass
             )
             .Trim();
 }

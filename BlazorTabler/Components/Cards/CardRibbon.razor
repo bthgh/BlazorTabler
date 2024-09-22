@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     @if (!string.IsNullOrEmpty(Text))
     {
         @Text
@@ -24,7 +24,7 @@
             TablerClasses.CardRibbon,
                 Position.GetDescription(),
                 Color.GetDescription(),
-                Class
+                CssClass
             )
             .Trim();
 

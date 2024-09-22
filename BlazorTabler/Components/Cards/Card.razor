@@ -1,7 +1,7 @@
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
-<div @ref="@Element" id="@Id" class="@Classes" style="@Style" @attributes="@AdditionalAttributes">
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
     @ChildContent
 </div>
 
@@ -25,7 +25,7 @@
                 RotateRight ? TablerClasses.CardRotateRight : "",
                 IsStacked ? TablerClasses.CardStacked : "",
                 BackgroundColors is not null ? BackgroundColors.GetDescription() : "",
-                Class
+                CssClass
             )
             .Trim();
 
