@@ -1,0 +1,123 @@
+@page "/Carousels"
+
+<PageHeader Title="Carousel"/>
+<PageBody>
+    <CardRow>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel"/>
+                <CardBody>
+                    <Carousel Id="carousel-default">
+                        <CarouselItem ImageUrl="static/photos/beautiful-blonde-woman-relaxing-with-a-can-of-coke-on-a-tree-stump-by-the-beach.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/brainstorming-session-with-creative-designers.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/finances-us-dollars-and-bitcoins-currency-money.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/group-of-people-brainstorming-and-taking-notes-2.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/blue-sofa-with-pillows-in-a-designer-living-room-interior.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with indicators"/>
+                <CardBody>
+                    <Carousel Id="carousel-indicators" IndicatorType="CarouselIndicatorTypes.Dash">
+                        <CarouselItem ImageUrl="static/photos/home-office-desk-with-macbook-iphone-calendar-watch-and-organizer.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/young-woman-working-in-a-cafe.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/everything-you-need-to-work-from-your-bed.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/young-entrepreneur-working-from-a-modern-cafe.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/finances-us-dollars-and-bitcoins-currency-money-2.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with controls"/>
+                <CardBody>
+                    <Carousel Id="carousel-controls" EnableControl="true">
+                        <CarouselItem ImageUrl="static/photos/group-of-people-sightseeing-in-the-city.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/color-palette-guide-sample-colors-catalog-.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/stylish-workplace-with-computer-at-home.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/pink-desk-in-the-home-office.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/young-woman-sitting-on-the-sofa-and-working-on-her-laptop.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with captions"/>
+                <CardBody>
+                    <Carousel Id="carousel-captions" EnableControl="true">
+                        <CarouselItem ImageUrl="static/photos/coffee-on-a-table-with-other-items.jpg" CaptionTitle="Slide label" CaptionNote="Nulla vitae elit libero, a pharetra augue mollis interdum." IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/young-entrepreneur-working-from-a-modern-cafe-2.jpg" CaptionTitle="Slide label" CaptionNote="Nulla vitae elit libero, a pharetra augue mollis interdum."/>
+                        <CarouselItem ImageUrl="static/photos/soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg" CaptionTitle="Slide label" CaptionNote="Nulla vitae elit libero, a pharetra augue mollis interdum."/>
+                        <CarouselItem ImageUrl="static/photos/fairy-lights-at-the-beach-in-bulgaria.jpg" CaptionTitle="Slide label" CaptionNote="Nulla vitae elit libero, a pharetra augue mollis interdum."/>
+                        <CarouselItem ImageUrl="static/photos/woman-working-on-laptop-at-home-office.jpg" CaptionTitle="Slide label" CaptionNote="Nulla vitae elit libero, a pharetra augue mollis interdum."/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with dot indicators"/>
+                <CardBody>
+                    <Carousel Id="carousel-indicators-dot" IndicatorType="CarouselIndicatorTypes.Dot" CssClass="carousel-fade">
+                        <CarouselItem ImageUrl="static/photos/modern-home-office.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/blond-using-her-laptop-at-her-bedroom.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/tropical-palm-leaves-floral-pattern-background.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/woman-read-book-and-drink-coffee.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/book-on-the-grass.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with thumbnail indicators"/>
+                <CardBody>
+                    <Carousel Id="carousel-indicators-thumb" IndicatorType="CarouselIndicatorTypes.Thumbnail" CssClass="carousel-fade">
+                        <CarouselItem ImageUrl="static/photos/colorful-exotic-flowers-and-greenery.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/workplace-with-laptop-on-table-at-home.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/city-lights-reflected-in-the-water-at-night.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/cryptocurrency-bitcoin-coins.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/woman-read-book-and-drink-coffee-2.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with vertical dot indicators"/>
+                <CardBody>
+                    <Carousel Id="carousel-indicators-dot-vertical" IndicatorType="CarouselIndicatorTypes.VerticalDot" CssClass="carousel-fade">
+                        <CarouselItem ImageUrl="static/photos/friends-at-a-restaurant-drinking-wine.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/beautiful-blonde-woman-on-a-wooden-pier-by-the-lake.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/white-apple-imac-computer-with-elephant-mousepad.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/workplace-with-laptop-on-table-at-home-2.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/working-in-a-restaurant-macbook-cheese-cake-and-cup-of-coffee.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardHeader Title="Carousel with vertical thumbnail indicators"/>
+                <CardBody>
+                    <Carousel Id="carousel-indicators-thumb-vertical" IndicatorType="CarouselIndicatorTypes.VerticalThumbnail" CssClass="carousel-fade">
+                        <CarouselItem ImageUrl="static/photos/tropical-palm-leaves-floral-pattern-background.jpg" IsActive="true"/>
+                        <CarouselItem ImageUrl="static/photos/woman-read-book-and-drink-coffee.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/book-on-the-grass.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/colorful-exotic-flowers-and-greenery.jpg"/>
+                        <CarouselItem ImageUrl="static/photos/workplace-with-laptop-on-table-at-home.jpg"/>
+                    </Carousel>
+                </CardBody>
+            </Card>
+        </div>
+    </CardRow>
+</PageBody>
+
+@code {
+
+}
