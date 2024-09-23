@@ -1,0 +1,34 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<span @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @ChildContent
+</span>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public TablerColors BackgroundColor { get; set; }
+    [Parameter] public BadgeTypes Type { get; set; } = BadgeTypes.Standard;
+    [Parameter] public bool IsBlink { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Badge,
+                GetColorClass(),
+                IsBlink ? TablerClasses.BadgeBlink : "",
+                CssClass
+            )
+            .Trim();
+
+    private string GetColorClass() =>
+        Type switch
+        {
+            BadgeTypes.Standard => $"{BackgroundColor.GetDescription()} text-{Enum.GetName(BackgroundColor)}-fg",
+            BadgeTypes.Notification => $"{BackgroundColor.GetDescription()} text-{Enum.GetName(BackgroundColor)}-fg badge-notification badge-pill",
+            BadgeTypes.Light => $"{BackgroundColor.GetDescription()}-lt",
+            BadgeTypes.Outline => $"{TablerClasses.BadgeOutline} text-{Enum.GetName(BackgroundColor)}",
+            _ => string.Empty
+        };
+}
