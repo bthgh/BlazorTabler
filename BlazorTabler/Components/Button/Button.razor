@@ -1,3 +1,4 @@
+@using Microsoft.VisualBasic
 @inherits TablerComponentBase
 @namespace BlazorTabler
 
@@ -20,7 +21,7 @@ else
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Parameter] public bool IsDisabled { get; set; }
     [Parameter] public bool IsActive { get; set; }
-    [Parameter] public ButtonColors ButtonColor { get; set; } = ButtonColors.primary;
+    [Parameter] public ButtonColors? ButtonColor { get; set; }
     [Parameter] public ButtonStyles ButtonStyle { get; set; } = ButtonStyles.Standard;
     [Parameter] public SvgIcon? Icon { get; set; }
     [Parameter] public ButtonTypes Type { get; set; } = ButtonTypes.Link;
@@ -31,14 +32,13 @@ else
     private string Classes =>
         string.Join(" ",
                 TablerClasses.Button,
-                ButtonStyle.GetDescription().Replace("###",ButtonColor.GetDescription()),
+                ButtonColor is not null ? ButtonStyle.GetDescription().Replace("###", ButtonColor?.GetDescription()) : "",
                 IsActive ? TablerClasses.ButtonActive : "",
                 IsDisabled ? TablerClasses.ButtonDisabled : "",
-                "w-100",
                 CssClass
             )
             .Trim();
-    
+
     private async Task HandleOnClick()
     {
         await Onclick.InvokeAsync();
