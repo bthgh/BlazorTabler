@@ -50,6 +50,9 @@ public static class TablerClasses
     public const string CardLinkPop = "card-link-pop";
     public const string CardTabs = "card-tabs";
     
+    //Carousel
+    public static string Carousel = "carousel slide";
+    public static string CarouselItem = "carousel-item";
     
     //Icon
     public const string Icon = "icon";

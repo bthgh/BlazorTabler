@@ -1,0 +1,86 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<CascadingValue Value="@(this)" IsFixed="true">
+    @ChildContent
+</CascadingValue>
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" data-bs-ride="carousel">
+    @if (IndicatorType is CarouselIndicatorTypes.Thumbnail or CarouselIndicatorTypes.VerticalThumbnail)
+    {
+        <div class="@IndicatorType.GetDescription()">
+            @for (int i = 0; i < carouselItems.Count; i++)
+            {
+                <button type="button" data-bs-target="#@Id" data-bs-slide-to="@i" 
+                        class="ratio ratio-4x3 @(carouselItems[i].IsActive ? "active" : "")"
+                        style="background-image: url(@carouselItems[i].ImageUrl)"></button>
+            }
+        </div>
+    }
+    else if (IndicatorType is not CarouselIndicatorTypes.None)
+    {
+        <div class="@IndicatorType.GetDescription()">
+            @for (int i = 0; i < carouselItems.Count; i++)
+            {
+                <button type="button" data-bs-target="#@Id" data-bs-slide-to="@i" class="@(carouselItems[i].IsActive ? "active" : "")"></button>
+            }
+        </div>
+    }
+    <div class="carousel-inner">
+        @foreach (var item in carouselItems)
+        {
+            <div @ref="@item.Element" id="@item.Id" class="@item.Classes" style="@item.CssStyle" @attributes="@item.AdditionalAttributes">
+                <img class="d-block w-100" alt="@item.ImageAlt" src="@item.ImageUrl">
+                @if (!string.IsNullOrEmpty(item.CaptionTitle) || !string.IsNullOrEmpty(item.CaptionNote))
+                {
+                    <div class="carousel-caption-background d-none d-md-block"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        @if (!string.IsNullOrEmpty(item.CaptionTitle))
+                        {
+                            <h3>@item.CaptionTitle</h3>
+                        }
+                        @if (!string.IsNullOrEmpty(item.CaptionNote))
+                        {
+                            <p>@item.CaptionNote</p>
+                        }
+                        
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    @if (EnableControl)
+    {
+        <a class="carousel-control-prev" href="#@Id" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#@Id" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    }
+</div>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool EnableControl { get; set; }
+    [Parameter] public CarouselIndicatorTypes IndicatorType { get; set; } = CarouselIndicatorTypes.None;
+
+    private List<CarouselItem> carouselItems = new();
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Carousel,
+                CssClass
+            )
+            .Trim();
+
+    internal void AddItem(CarouselItem item)
+    {
+        carouselItems.Add(item);
+        StateHasChanged();
+    }
+
+}
