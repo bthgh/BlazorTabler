@@ -25,6 +25,17 @@ A premium and open source Blazor dashboard (.Net 8) with a responsive and high-q
 
 This project is under development. 
 
+## 🏆 Ready Components
+
+- Accordion
+- Alerts
+- Badge
+- Button
+- Cards
+- Carousel
+- Icon
+- Page
+
 
 ## 📖 Documentation
 
