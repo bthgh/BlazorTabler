@@ -29,6 +29,7 @@ This project is under development.
 
 - Accordion
 - Alerts
+- Avatar
 - Badge
 - Button
 - Cards
