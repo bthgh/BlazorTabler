@@ -14,6 +14,9 @@ public static class TablerClasses
     public const string AlertDismissible = "alert-dismissible";
     public const string AlertImportant = "alert-important";
     
+    //Avatar
+    public const string Avatar = "avatar";
+    
     //Badge
     public const string Badge = "badge";
     public const string BadgeOutline = "badge-outline";

@@ -1,0 +1,31 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<span @ref="@Element" id="@Id" class="@Classes" style="@Styles" @attributes="@AdditionalAttributes">
+    @ChildContent
+</span>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public AvatarSizes Size { get; set; } = AvatarSizes.sm;
+    [Parameter] public string? ImageUrl { get; set; }
+
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Avatar,
+                Size.GetDescription(),
+                CssClass
+            )
+            .Trim();
+
+    private string Styles =>
+        string.Join(" ",
+                string.IsNullOrEmpty(ImageUrl) ? "" : $"background-image: url({ImageUrl})",
+                CssStyle
+            )
+            .Trim();
+ 
+}
