@@ -57,6 +57,8 @@ public static class TablerClasses
     public static string Carousel = "carousel slide";
     public static string CarouselItem = "carousel-item";
     
+    //Color Picker
+    public static string ColorPicker = "form-control d-block";
     //Icon
     public const string Icon = "icon";
     

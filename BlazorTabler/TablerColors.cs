@@ -26,5 +26,7 @@ public enum TablerColors
     [Description("bg-teal")] teal,
     [Description("bg-cyan")] cyan,
     [Description("bg-black")] black,
-    [Description("bg-white")] white
+    [Description("bg-white")] white,
+    [Description("bg-transparent")] transparent
+    
 }

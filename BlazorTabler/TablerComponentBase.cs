@@ -31,7 +31,6 @@ public abstract class TablerComponentBase : ComponentBase, IDisposable, IAsyncDi
 
         base.OnInitialized();
     }
-  
 
     /// <inheritdoc />
     /// <see href="https://learn.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-8.0" />
