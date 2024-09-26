@@ -1,0 +1,37 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+    <input @ref="@Element"
+           id="@Id"
+           class="@Classes"
+           style="@CssStyle"
+           @attributes="@AdditionalAttributes"
+           type="text"
+           @bind="SelectedColor" data-coloris/>
+
+@code
+{
+    [Parameter] public string SelectedColor { get; set; } = "0054a6";
+    [Parameter] public List<string> Swatches { get; set; } =
+    [
+        "#0054a6", "#45aaf2", "#6574cd", "#a55eea", "#f66d9b",
+        "#fa4654", "#fd9644", "#f1c40f", "#7bd235", "#5eba00",
+        "#2bcbba", "#17a2b8"
+    ];
+ 
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.ColorPicker,
+                CssClass
+            )
+            .Trim();
+     
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JsRuntime.InvokeVoidAsync("InitColorPicker", Id, Swatches);
+        }
+    }
+}
