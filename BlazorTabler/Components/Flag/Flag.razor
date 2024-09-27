@@ -1,0 +1,17 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<span @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes"></span>
+
+@code {
+    [Parameter] public required TablerFlags Country { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Flag,
+                Country.GetDescription(),
+                CssClass
+            )
+            .Trim();
+
+}

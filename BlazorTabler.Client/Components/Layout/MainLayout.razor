@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@inherits LayoutComponentBase
 
 <div class="page">
 <!-- Navbar -->
@@ -246,13 +247,13 @@
             </a>
             <NavLink class="dropdown-item" href="Badges">
                 Badges
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </NavLink>
             <NavLink class="dropdown-item" href="Buttons">Buttons</NavLink>
             <div class="dropend">
                 <a class="dropdown-item dropdown-toggle" href="#sidebar-cards" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
                     Cards
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <div class="dropdown-menu">
                     <NavLink href="Cards" class="dropdown-item">
@@ -260,7 +261,7 @@
                     </NavLink>
                     <a href="./card-actions.html" class="dropdown-item">
                         Card actions
-                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                        <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                     </a>
                     <a href="./cards-masonry.html" class="dropdown-item">
                         Cards Masonry
@@ -269,7 +270,7 @@
             </div>
             <NavLink class="dropdown-item" href="Carousels">
                 Carousel
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </NavLink>
             <a class="dropdown-item" href="./charts.html">
                 Charts
@@ -279,20 +280,20 @@
             </a>
             <NavLink class="dropdown-item" href="ColorPickers">
                 Color picker
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </NavLink>
             <a class="dropdown-item" href="./datagrid.html">
                 Data grid
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <a class="dropdown-item" href="./datatables.html">
                 Datatables
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <NavLink class="dropdown-item" href="Dropdowns">Dropdowns</NavLink>
             <a class="dropdown-item" href="./dropzone.html">
                 Dropzone
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <div class="dropend">
                 <a class="dropdown-item dropdown-toggle" href="#sidebar-error" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
@@ -310,19 +311,19 @@
                     </a>
                 </div>
             </div>
-            <a class="dropdown-item" href="./flags.html">
+            <NavLink class="dropdown-item" href="Flags">
                 Flags
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-            </a>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
+            </NavLink>
             <a class="dropdown-item" href="./inline-player.html">
                 Inline player
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
         </div>
         <div class="dropdown-menu-column">
             <a class="dropdown-item" href="./lightbox.html">
                 Lightbox
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <a class="dropdown-item" href="./lists.html">
                 Lists
@@ -338,7 +339,7 @@
             </a>
             <a class="dropdown-item" href="./maps-vector.html">
                 Map vector
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <a class="dropdown-item" href="./markdown.html">
                 Markdown
@@ -358,11 +359,11 @@
             </a>
             <a class="dropdown-item" href="./steps.html">
                 Steps
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <a class="dropdown-item" href="./stars-rating.html">
                 Stars rating
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
             <a class="dropdown-item" href="./tabs.html">
                 Tabs
@@ -378,7 +379,7 @@
             </a>
             <a class="dropdown-item" href="./tinymce.html">
                 TinyMCE
-                <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </a>
         </div>
     </div>
@@ -417,11 +418,11 @@
                 </a>
                 <a class="dropdown-item" href="./cookie-banner.html">
                     Cookie banner
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./chat.html">
                     Chat
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./activity.html">
                     Activity
@@ -443,7 +444,7 @@
                 </a>
                 <a class="dropdown-item" href="./faq.html">
                     FAQ
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./users.html">
                     Users
@@ -455,18 +456,18 @@
             <div class="dropdown-menu-column">
                 <a class="dropdown-item" href="./logs.html">
                     Logs
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./music.html">
                     Music
                 </a>
                 <a class="dropdown-item" href="./photogrid.html">
                     Photogrid
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./tasks.html">
                     Tasks
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./uptime.html">
                     Uptime monitor
@@ -479,19 +480,19 @@
                 </a>
                 <a class="dropdown-item" href="./settings.html">
                     Settings
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./trial-ended.html">
                     Trial ended
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./job-listing.html">
                     Job listing
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./page-loader.html">
                     Page loader
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
             </div>
         </div>
@@ -517,7 +518,7 @@
                 </a>
                 <a class="dropdown-item" href="./layout-boxed.html">
                     Boxed
-                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    <Badge BackgroundColor="TablerColors.green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
                 </a>
                 <a class="dropdown-item" href="./layout-vertical.html">
                     Vertical
