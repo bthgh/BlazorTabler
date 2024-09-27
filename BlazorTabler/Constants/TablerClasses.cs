@@ -67,6 +67,9 @@ public static class TablerClasses
     public static string DropdownHeader = "dropdown-header";
     public static string DropdownArrow = "dropdown-menu-arrow";
     
+    //Flag 
+    public const string Flag = "flag";
+    
     //Icon
     public const string Icon = "icon";
     

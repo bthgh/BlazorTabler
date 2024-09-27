@@ -36,6 +36,7 @@ This project is under development.
 - Carousel
 - Color Picker
 - Dropdown
+- Flag
 - Icon
 - Page
 

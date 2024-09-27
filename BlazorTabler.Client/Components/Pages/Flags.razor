@@ -1,0 +1,767 @@
+@page "/Flags" 
+@inject IJSRuntime JSRuntime
+@inject IWebHostEnvironment env
+@rendermode InteractiveServer
+
+<PageHeader Title="Flags"/>
+<PageBody>
+<Card>
+<CardHeader Title="List of all Flags"/>
+<CardBody CssClass="p-0">
+<div class="demo-icons-list-wrap">
+<div class="demo-icons-list">
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Andorra" data-bs-original-title="Andorra">
+    <Flag Country="TablerFlags.Andorra"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="United Arab Emirates" data-bs-original-title="United Arab Emirates">
+    <Flag Country="TablerFlags.United_Arab_Emirates"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Afghanistan" data-bs-original-title="Afghanistan">
+    <Flag Country="TablerFlags.Afghanistan"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Antigua" data-bs-original-title="Antigua">
+    <Flag Country="TablerFlags.Antigua"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Anguilla" data-bs-original-title="Anguilla">
+    <Flag Country="TablerFlags.Anguilla"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Armenia" data-bs-original-title="Armenia">
+    <Flag Country="TablerFlags.Armenia"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Angolan" data-bs-original-title="Angolan">
+    <Flag Country="TablerFlags.Angolan"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Antarctica" data-bs-original-title="Antarctica">
+    <Flag Country="TablerFlags.Antarctica"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Argentina" data-bs-original-title="Argentina">
+    <Flag Country="TablerFlags.Argentina"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="American Samoa" data-bs-original-title="American Samoa">
+    <Flag Country="TablerFlags.American_Samoa"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Austria" data-bs-original-title="Austria">
+    <Flag Country="TablerFlags.Austria"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Australia" data-bs-original-title="Australia">
+    <Flag Country="TablerFlags.Australia"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Aruba" data-bs-original-title="Aruba">
+    <Flag Country="TablerFlags.Aruba"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Aslan Islands" data-bs-original-title="Aslan Islands">
+    <Flag Country="TablerFlags.Aslan_Islands"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Azerbaijan" data-bs-original-title="Azerbaijan">
+    <Flag Country="TablerFlags.Azerbaijan"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bosnian" data-bs-original-title="Bosnian">
+    <Flag Country="TablerFlags.Bosnian"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Barbados" data-bs-original-title="Barbados">
+    <Flag Country="TablerFlags.Barbados"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Belgium" data-bs-original-title="Belgium">
+    <Flag Country="TablerFlags.Belgium"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Burkina Faso" data-bs-original-title="Burkina Faso">
+    <Flag Country="TablerFlags.Burkina_Faso"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bulgaria" data-bs-original-title="Bulgaria">
+    <Flag Country="TablerFlags.Bulgaria"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bahrain" data-bs-original-title="Bahrain">
+    <Flag Country="TablerFlags.Bahrain"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Burundi" data-bs-original-title="Burundi">
+    <Flag Country="TablerFlags.Burundi"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Benin" data-bs-original-title="Benin">
+    <Flag Country="TablerFlags.Benin"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Saint-Barthélemy" data-bs-original-title="Saint-Barthélemy">
+    <Flag Country="TablerFlags.Saint_Barthelemy"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bermuda" data-bs-original-title="Bermuda">
+    <Flag Country="TablerFlags.Bermuda"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bruneian" data-bs-original-title="Bruneian">
+    <Flag Country="TablerFlags.Bruneian"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bolivia" data-bs-original-title="Bolivia">
+    <Flag Country="TablerFlags.Bolivia"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bonaire" data-bs-original-title="Bonaire">
+    <Flag Country="TablerFlags.Bonaire"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Brazil" data-bs-original-title="Brazil">
+    <Flag Country="TablerFlags.Brazil"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bahamas" data-bs-original-title="Bahamas">
+    <Flag Country="TablerFlags.Bahamas"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bhutan" data-bs-original-title="Bhutan">
+    <Flag Country="TablerFlags.Bhutan"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Bouvet Island" data-bs-original-title="Bouvet Island">
+    <Flag Country="TablerFlags.Bouvet_Island"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Batswana" data-bs-original-title="Batswana">
+    <Flag Country="TablerFlags.Batswana"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Belarus" data-bs-original-title="Belarus">
+    <Flag Country="TablerFlags.Belarus"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Belize" data-bs-original-title="Belize">
+    <Flag Country="TablerFlags.Belize"/>
+</span>
+<span class="demo-icons-list-item" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Canada" data-bs-original-title="Canada">
+    <Flag Country="TablerFlags.Canada"/>
+</span>
+<span aria-label="Cocos Island" class="demo-icons-list-item" data-bs-original-title="Cocos Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cocos_Island"/>
+</span>
+<span aria-label="Democratic Republic of Congo" class="demo-icons-list-item" data-bs-original-title="Democratic Republic of Congo" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Democratic_Republic_of_Congo"/>
+</span>
+<span aria-label="Central African Republic" class="demo-icons-list-item" data-bs-original-title="Central African Republic" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Central_African_Republic"/>
+</span>
+<span aria-label="Republic of the Congo" class="demo-icons-list-item" data-bs-original-title="Republic of the Congo" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Republic_of_the_Congo"/>
+</span>
+<span aria-label="Switzerland" class="demo-icons-list-item" data-bs-original-title="Switzerland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Switzerland"/>
+</span>
+<span aria-label="Ivory Coast" class="demo-icons-list-item" data-bs-original-title="Ivory Coast" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ivory_Coast"/>
+</span>
+<span aria-label="Cook Island" class="demo-icons-list-item" data-bs-original-title="Cook Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cook_Island"/>
+</span>
+<span aria-label="Chile" class="demo-icons-list-item" data-bs-original-title="Chile" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Chile"/>
+</span>
+<span aria-label="Cameroon" class="demo-icons-list-item" data-bs-original-title="Cameroon" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cameroon"/>
+</span>
+<span aria-label="China" class="demo-icons-list-item" data-bs-original-title="China" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.China"/>
+</span>
+<span aria-label="Colombia" class="demo-icons-list-item" data-bs-original-title="Colombia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Colombia"/>
+</span>
+<span aria-label="Costa Rica" class="demo-icons-list-item" data-bs-original-title="Costa Rica" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Costa_Rica"/>
+</span>
+<span aria-label="Cuba" class="demo-icons-list-item" data-bs-original-title="Cuba" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cuba"/>
+</span>
+<span aria-label="Cape Verde" class="demo-icons-list-item" data-bs-original-title="Cape Verde" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cape_Verde"/>
+</span>
+<span aria-label="Curacao" class="demo-icons-list-item" data-bs-original-title="Curacao" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Curacao"/>
+</span>
+<span aria-label="Christmas Island" class="demo-icons-list-item" data-bs-original-title="Christmas Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Christmas_Island"/>
+</span>
+<span aria-label="Cyprus" class="demo-icons-list-item" data-bs-original-title="Cyprus" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cyprus"/>
+</span>
+<span aria-label="Czech Republic" class="demo-icons-list-item" data-bs-original-title="Czech Republic" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Czech_Republic"/>
+</span>
+<span aria-label="Germany" class="demo-icons-list-item" data-bs-original-title="Germany" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Germany"/>
+</span>
+<span aria-label="Djibouti" class="demo-icons-list-item" data-bs-original-title="Djibouti" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Djibouti"/>
+</span>
+<span aria-label="Denmark" class="demo-icons-list-item" data-bs-original-title="Denmark" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Denmark"/>
+</span>
+<span aria-label="Dominica" class="demo-icons-list-item" data-bs-original-title="Dominica" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Dominica"/>
+</span>
+<span aria-label="Dominican Republic" class="demo-icons-list-item" data-bs-original-title="Dominican Republic" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Dominican_Republic"/>
+</span>
+<span aria-label="Ecuador" class="demo-icons-list-item" data-bs-original-title="Ecuador" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ecuador"/>
+</span>
+<span aria-label="Estonia" class="demo-icons-list-item" data-bs-original-title="Estonia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Estonia"/>
+</span>
+<span aria-label="Egypt" class="demo-icons-list-item" data-bs-original-title="Egypt" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Egypt"/>
+</span>
+<span aria-label="Sahrawi" class="demo-icons-list-item" data-bs-original-title="Sahrawi" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sahrawi"/>
+</span>
+<span aria-label="Eritrea" class="demo-icons-list-item" data-bs-original-title="Eritrea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Eritrea"/>
+</span>
+<span aria-label="Spain" class="demo-icons-list-item" data-bs-original-title="Spain" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Spain"/>
+</span>
+<span aria-label="Ethiopia" class="demo-icons-list-item" data-bs-original-title="Ethiopia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ethiopia"/>
+</span>
+<span aria-label="European Union" class="demo-icons-list-item" data-bs-original-title="European Union" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.European_Union"/>
+</span>
+<span aria-label="Finland" class="demo-icons-list-item" data-bs-original-title="Finland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Finland"/>
+</span>
+<span aria-label="Fiji" class="demo-icons-list-item" data-bs-original-title="Fiji" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Fiji"/>
+</span>
+<span aria-label="Falkland Islands" class="demo-icons-list-item" data-bs-original-title="Falkland Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Falkland_Islands"/>
+</span>
+<span aria-label="Federate States of Micronesia" class="demo-icons-list-item" data-bs-original-title="Federate States of Micronesia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Federate_States_of_Micronesia"/>
+</span>
+<span aria-label="Faroe Islands" class="demo-icons-list-item" data-bs-original-title="Faroe Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Faroe_Islands"/>
+</span>
+<span aria-label="France" class="demo-icons-list-item" data-bs-original-title="France" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.France"/>
+</span>
+<span aria-label="Gabon" class="demo-icons-list-item" data-bs-original-title="Gabon" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Gabon"/>
+</span>
+<span aria-label="Great Britain" class="demo-icons-list-item" data-bs-original-title="Great Britain" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Great_Britain"/>
+</span>
+<span aria-label="England" class="demo-icons-list-item" data-bs-original-title="England" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.England"/>
+</span>
+<span aria-label="Nothern Ireland" class="demo-icons-list-item" data-bs-original-title="Nothern Ireland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nothern_Ireland"/>
+</span>
+<span aria-label="Scotland" class="demo-icons-list-item" data-bs-original-title="Scotland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Scotland"/>
+</span>
+<span aria-label="Wales" class="demo-icons-list-item" data-bs-original-title="Wales" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Wales"/>
+</span>
+<span aria-label="Grenada" class="demo-icons-list-item" data-bs-original-title="Grenada" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Grenada"/>
+</span>
+<span aria-label="Georgia" class="demo-icons-list-item" data-bs-original-title="Georgia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Georgia"/>
+</span>
+<span aria-label="Guyana" class="demo-icons-list-item" data-bs-original-title="Guyana" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guyana"/>
+</span>
+<span aria-label="Guernsey" class="demo-icons-list-item" data-bs-original-title="Guernsey" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guernsey"/>
+</span>
+<span aria-label="Ghana" class="demo-icons-list-item" data-bs-original-title="Ghana" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ghana"/>
+</span>
+<span aria-label="Gibraltar" class="demo-icons-list-item" data-bs-original-title="Gibraltar" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Gibraltar"/>
+</span>
+<span aria-label="Greenland" class="demo-icons-list-item" data-bs-original-title="Greenland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Greenland"/>
+</span>
+<span aria-label="Gambia" class="demo-icons-list-item" data-bs-original-title="Gambia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Gambia"/>
+</span>
+<span aria-label="Guinea" class="demo-icons-list-item" data-bs-original-title="Guinea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guinea"/>
+</span>
+<span aria-label="Guadeloupe" class="demo-icons-list-item" data-bs-original-title="Guadeloupe" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guadeloupe"/>
+</span>
+<span aria-label="Equatorial Guinea" class="demo-icons-list-item" data-bs-original-title="Equatorial Guinea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Equatorial_Guinea"/>
+</span>
+<span aria-label="Greece" class="demo-icons-list-item" data-bs-original-title="Greece" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Greece"/>
+</span>
+<span aria-label="South Georgia" class="demo-icons-list-item" data-bs-original-title="South Georgia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.South_Georgia"/>
+</span>
+<span aria-label="Guatemala" class="demo-icons-list-item" data-bs-original-title="Guatemala" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guatemala"/>
+</span>
+<span aria-label="Guam" class="demo-icons-list-item" data-bs-original-title="Guam" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guam"/>
+</span>
+<span aria-label="Guinea-Bissau" class="demo-icons-list-item" data-bs-original-title="Guinea-Bissau" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guinea_Bissau"/>
+</span>
+<span aria-label="Guyana" class="demo-icons-list-item" data-bs-original-title="Guyana" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Guyana"/>
+</span>
+<span aria-label="Hong Kong" class="demo-icons-list-item" data-bs-original-title="Hong Kong" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Hong_Kong"/>
+</span>
+<span aria-label="Heard and McDonald Islands" class="demo-icons-list-item" data-bs-original-title="Heard and McDonald Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Heard_and_McDonald_Islands"/>
+</span>
+<span aria-label="Honduras" class="demo-icons-list-item" data-bs-original-title="Honduras" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Honduras"/>
+</span>
+<span aria-label="Croatia" class="demo-icons-list-item" data-bs-original-title="Croatia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Croatia"/>
+</span>
+<span aria-label="Haiti" class="demo-icons-list-item" data-bs-original-title="Haiti" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Haiti"/>
+</span>
+<span aria-label="Hungary" class="demo-icons-list-item" data-bs-original-title="Hungary" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Hungary"/>
+</span>
+<span aria-label="Indonesia" class="demo-icons-list-item" data-bs-original-title="Indonesia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Indonesia"/>
+</span>
+<span aria-label="Ireland" class="demo-icons-list-item" data-bs-original-title="Ireland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ireland"/>
+</span>
+<span aria-label="Israel" class="demo-icons-list-item" data-bs-original-title="Israel" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Israel"/>
+</span>
+<span aria-label="Isle of Man" class="demo-icons-list-item" data-bs-original-title="Isle of Man" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Isle_of_Man"/>
+</span>
+<span aria-label="India" class="demo-icons-list-item" data-bs-original-title="India" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.India"/>
+</span>
+<span aria-label="British Indian Ocean Territory" class="demo-icons-list-item" data-bs-original-title="British Indian Ocean Territory" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.British_Indian_Ocean_Territory"/>
+</span>
+<span aria-label="Iraq" class="demo-icons-list-item" data-bs-original-title="Iraq" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Iraq"/>
+</span>
+<span aria-label="Iran" class="demo-icons-list-item" data-bs-original-title="Iran" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Iran"/>
+</span>
+<span aria-label="Iceland" class="demo-icons-list-item" data-bs-original-title="Iceland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Iceland"/>
+</span>
+<span aria-label="Italy" class="demo-icons-list-item" data-bs-original-title="Italy" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Italy"/>
+</span>
+<span aria-label="Jersey" class="demo-icons-list-item" data-bs-original-title="Jersey" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Jersey"/>
+</span>
+<span aria-label="Jamaica" class="demo-icons-list-item" data-bs-original-title="Jamaica" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Jamaica"/>
+</span>
+<span aria-label="Jordan" class="demo-icons-list-item" data-bs-original-title="Jordan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Jordan"/>
+</span>
+<span aria-label="Japan" class="demo-icons-list-item" data-bs-original-title="Japan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Japan"/>
+</span>
+<span aria-label="Kenya" class="demo-icons-list-item" data-bs-original-title="Kenya" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Kenya"/>
+</span>
+<span aria-label="Kyrgyzstan" class="demo-icons-list-item" data-bs-original-title="Kyrgyzstan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Kyrgyzstan"/>
+</span>
+<span aria-label="Cambodia" class="demo-icons-list-item" data-bs-original-title="Cambodia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cambodia"/>
+</span>
+<span aria-label="Kiribati" class="demo-icons-list-item" data-bs-original-title="Kiribati" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Kiribati"/>
+</span>
+<span aria-label="Comoros" class="demo-icons-list-item" data-bs-original-title="Comoros" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Comoros"/>
+</span>
+<span aria-label="North Korea" class="demo-icons-list-item" data-bs-original-title="North Korea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.North_Korea"/>
+</span>
+<span aria-label="South Korea" class="demo-icons-list-item" data-bs-original-title="South Korea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.South_Korea"/>
+</span>
+<span aria-label="Kuwait" class="demo-icons-list-item" data-bs-original-title="Kuwait" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Kuwait"/>
+</span>
+<span aria-label="Cayman Islands" class="demo-icons-list-item" data-bs-original-title="Cayman Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Cayman_Islands"/>
+</span>
+<span aria-label="Kazakhstan" class="demo-icons-list-item" data-bs-original-title="Kazakhstan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Kazakhstan"/>
+</span>
+<span aria-label="Laos" class="demo-icons-list-item" data-bs-original-title="Laos" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Laos"/>
+</span>
+<span aria-label="Lebanese" class="demo-icons-list-item" data-bs-original-title="Lebanese" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Lebanese"/>
+</span>
+<span aria-label="Saint Lucia" class="demo-icons-list-item" data-bs-original-title="Saint Lucia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saint_Lucia"/>
+</span>
+<span aria-label="Liechtenstein" class="demo-icons-list-item" data-bs-original-title="Liechtenstein" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Liechtenstein"/>
+</span>
+<span aria-label="Sri Lanka" class="demo-icons-list-item" data-bs-original-title="Sri Lanka" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sri_Lanka"/>
+</span>
+<span aria-label="Liberia" class="demo-icons-list-item" data-bs-original-title="Liberia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Liberia"/>
+</span>
+<span aria-label="Lesotho" class="demo-icons-list-item" data-bs-original-title="Lesotho" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Lesotho"/>
+</span>
+<span aria-label="Lithuania" class="demo-icons-list-item" data-bs-original-title="Lithuania" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Lithuania"/>
+</span>
+<span aria-label="Luxembourg" class="demo-icons-list-item" data-bs-original-title="Luxembourg" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Luxembourg"/>
+</span>
+<span aria-label="Latvia" class="demo-icons-list-item" data-bs-original-title="Latvia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Latvia"/>
+</span>
+<span aria-label="Libya" class="demo-icons-list-item" data-bs-original-title="Libya" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Libya"/>
+</span>
+<span aria-label="Morocco" class="demo-icons-list-item" data-bs-original-title="Morocco" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Morocco"/>
+</span>
+<span aria-label="Monaco" class="demo-icons-list-item" data-bs-original-title="Monaco" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Monaco"/>
+</span>
+<span aria-label="Moldova" class="demo-icons-list-item" data-bs-original-title="Moldova" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Moldova"/>
+</span>
+<span aria-label="Montenegro" class="demo-icons-list-item" data-bs-original-title="Montenegro" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Montenegro"/>
+</span>
+<span aria-label="Saint Martin" class="demo-icons-list-item" data-bs-original-title="Saint Martin" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saint_Martin"/>
+</span>
+<span aria-label="Madagascar" class="demo-icons-list-item" data-bs-original-title="Madagascar" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Madagascar"/>
+</span>
+<span aria-label="Marshall Islands" class="demo-icons-list-item" data-bs-original-title="Marshall Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Marshall_Islands"/>
+</span>
+<span aria-label="Macedonia" class="demo-icons-list-item" data-bs-original-title="Macedonia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Macedonia"/>
+</span>
+<span aria-label="Mali" class="demo-icons-list-item" data-bs-original-title="Mali" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mali"/>
+</span>
+<span aria-label="Myanmar" class="demo-icons-list-item" data-bs-original-title="Myanmar" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Myanmar"/>
+</span>
+<span aria-label="Mongolia" class="demo-icons-list-item" data-bs-original-title="Mongolia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mongolia"/>
+</span>
+<span aria-label="Macao" class="demo-icons-list-item" data-bs-original-title="Macao" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Macao"/>
+</span>
+<span aria-label="Nothern Mariana Islands" class="demo-icons-list-item" data-bs-original-title="Nothern Mariana Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nothern_Mariana_Islands"/>
+</span>
+<span aria-label="Martinique" class="demo-icons-list-item" data-bs-original-title="Martinique" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Martinique"/>
+</span>
+<span aria-label="Mauritania" class="demo-icons-list-item" data-bs-original-title="Mauritania" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mauritania"/>
+</span>
+<span aria-label="Montserrat" class="demo-icons-list-item" data-bs-original-title="Montserrat" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Montserrat"/>
+</span>
+<span aria-label="Malta" class="demo-icons-list-item" data-bs-original-title="Malta" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Malta"/>
+</span>
+<span aria-label="Mauritius" class="demo-icons-list-item" data-bs-original-title="Mauritius" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mauritius"/>
+</span>
+<span aria-label="Maldives" class="demo-icons-list-item" data-bs-original-title="Maldives" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Maldives"/>
+</span>
+<span aria-label="Malawi" class="demo-icons-list-item" data-bs-original-title="Malawi" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Malawi"/>
+</span>
+<span aria-label="Mexico" class="demo-icons-list-item" data-bs-original-title="Mexico" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mexico"/>
+</span>
+<span aria-label="Malaysia" class="demo-icons-list-item" data-bs-original-title="Malaysia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Malaysia"/>
+</span>
+<span aria-label="Mozambique" class="demo-icons-list-item" data-bs-original-title="Mozambique" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Mozambique"/>
+</span>
+<span aria-label="Namibia" class="demo-icons-list-item" data-bs-original-title="Namibia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Namibia"/>
+</span>
+<span aria-label="New Caledonia" class="demo-icons-list-item" data-bs-original-title="New Caledonia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.New_Caledonia"/>
+</span>
+<span aria-label="Niger" class="demo-icons-list-item" data-bs-original-title="Niger" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Niger"/>
+</span>
+<span aria-label="Norfolk Island" class="demo-icons-list-item" data-bs-original-title="Norfolk Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Norfolk_Island"/>
+</span>
+<span aria-label="Nigeria" class="demo-icons-list-item" data-bs-original-title="Nigeria" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nigeria"/>
+</span>
+<span aria-label="Nicaragua" class="demo-icons-list-item" data-bs-original-title="Nicaragua" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nicaragua"/>
+</span>
+<span aria-label="Norway" class="demo-icons-list-item" data-bs-original-title="Norway" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Norway"/>
+</span>
+<span aria-label="Nepal" class="demo-icons-list-item" data-bs-original-title="Nepal" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nepal"/>
+</span>
+<span aria-label="Nauruan" class="demo-icons-list-item" data-bs-original-title="Nauruan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Nauruan"/>
+</span>
+<span aria-label="New Zealand" class="demo-icons-list-item" data-bs-original-title="New Zealand" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.New_Zealand"/>
+</span>
+<span aria-label="Oman" class="demo-icons-list-item" data-bs-original-title="Oman" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Oman"/>
+</span>
+<span aria-label="Panama" class="demo-icons-list-item" data-bs-original-title="Panama" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Panama"/>
+</span>
+<span aria-label="Peru" class="demo-icons-list-item" data-bs-original-title="Peru" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Peru"/>
+</span>
+<span aria-label="French Polynesia" class="demo-icons-list-item" data-bs-original-title="French Polynesia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.French_Polynesia"/>
+</span>
+<span aria-label="Papua New Guinea" class="demo-icons-list-item" data-bs-original-title="Papua New Guinea" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Papua_New_Guinea"/>
+</span>
+<span aria-label="Philippines" class="demo-icons-list-item" data-bs-original-title="Philippines" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Philippines"/>
+</span>
+<span aria-label="Pakistan" class="demo-icons-list-item" data-bs-original-title="Pakistan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Pakistan"/>
+</span>
+<span aria-label="Poland" class="demo-icons-list-item" data-bs-original-title="Poland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Poland"/>
+</span>
+<span aria-label="Saint Pierre" class="demo-icons-list-item" data-bs-original-title="Saint Pierre" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saint_Pierre"/>
+</span>
+<span aria-label="Pitcairn Islands" class="demo-icons-list-item" data-bs-original-title="Pitcairn Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Pitcairn_Islands"/>
+</span>
+<span aria-label="Puerto Rico" class="demo-icons-list-item" data-bs-original-title="Puerto Rico" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Puerto_Rico"/>
+</span>
+<span aria-label="Palestine" class="demo-icons-list-item" data-bs-original-title="Palestine" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Palestine"/>
+</span>
+<span aria-label="Portugal" class="demo-icons-list-item" data-bs-original-title="Portugal" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Portugal"/>
+</span>
+<span aria-label="Palau" class="demo-icons-list-item" data-bs-original-title="Palau" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Palau"/>
+</span>
+<span aria-label="Paraguay" class="demo-icons-list-item" data-bs-original-title="Paraguay" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Paraguay"/>
+</span>
+<span aria-label="Qatar" class="demo-icons-list-item" data-bs-original-title="Qatar" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Qatar"/>
+</span>
+<span aria-label="Reunion Island" class="demo-icons-list-item" data-bs-original-title="Reunion Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Reunion_Island"/>
+</span>
+<span aria-label="Romania" class="demo-icons-list-item" data-bs-original-title="Romania" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Romania"/>
+</span>
+<span aria-label="Serbia" class="demo-icons-list-item" data-bs-original-title="Serbia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Serbia"/>
+</span>
+<span aria-label="Russia" class="demo-icons-list-item" data-bs-original-title="Russia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Russia"/>
+</span>
+<span aria-label="Rwanda" class="demo-icons-list-item" data-bs-original-title="Rwanda" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Rwanda"/>
+</span>
+<span aria-label="Saudi Arabia" class="demo-icons-list-item" data-bs-original-title="Saudi Arabia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saudi_Arabia"/>
+</span>
+<span aria-label="Solomon Islands" class="demo-icons-list-item" data-bs-original-title="Solomon Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Solomon_Islands"/>
+</span>
+<span aria-label="Seychelles" class="demo-icons-list-item" data-bs-original-title="Seychelles" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Seychelles"/>
+</span>
+<span aria-label="Sudan" class="demo-icons-list-item" data-bs-original-title="Sudan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sudan"/>
+</span>
+<span aria-label="Sweden" class="demo-icons-list-item" data-bs-original-title="Sweden" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sweden"/>
+</span>
+<span aria-label="Singapore" class="demo-icons-list-item" data-bs-original-title="Singapore" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Singapore"/>
+</span>
+<span aria-label="Saint Helena" class="demo-icons-list-item" data-bs-original-title="Saint Helena" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saint_Helena"/>
+</span>
+<span aria-label="Slovenia" class="demo-icons-list-item" data-bs-original-title="Slovenia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Slovenia"/>
+</span>
+<span aria-label="Svalbard Island" class="demo-icons-list-item" data-bs-original-title="Svalbard Island" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Svalbard_Island"/>
+</span>
+<span aria-label="Slovakia" class="demo-icons-list-item" data-bs-original-title="Slovakia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Slovakia"/>
+</span>
+<span aria-label="Sierra Leone" class="demo-icons-list-item" data-bs-original-title="Sierra Leone" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sierra_Leone"/>
+</span>
+<span aria-label="San Marino" class="demo-icons-list-item" data-bs-original-title="San Marino" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.San_Marino"/>
+</span>
+<span aria-label="Senegal" class="demo-icons-list-item" data-bs-original-title="Senegal" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Senegal"/>
+</span>
+<span aria-label="Somalia" class="demo-icons-list-item" data-bs-original-title="Somalia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Somalia"/>
+</span>
+<span aria-label="Suriname" class="demo-icons-list-item" data-bs-original-title="Suriname" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Suriname"/>
+</span>
+<span aria-label="South Sudan" class="demo-icons-list-item" data-bs-original-title="South Sudan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.South_Sudan"/>
+</span>
+<span aria-label="Sao Tome" class="demo-icons-list-item" data-bs-original-title="Sao Tome" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sao_Tome"/>
+</span>
+<span aria-label="El Salvador" class="demo-icons-list-item" data-bs-original-title="El Salvador" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.El_Salvador"/>
+</span>
+<span aria-label="Sint Maarten" class="demo-icons-list-item" data-bs-original-title="Sint Maarten" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Sint_Maarten"/>
+</span>
+<span aria-label="Syria" class="demo-icons-list-item" data-bs-original-title="Syria" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Syria"/>
+</span>
+<span aria-label="Swaziland" class="demo-icons-list-item" data-bs-original-title="Swaziland" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Swaziland"/>
+</span>
+<span aria-label="Turks and Caicos" class="demo-icons-list-item" data-bs-original-title="Turks and Caicos" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Turks_and_Caicos"/>
+</span>
+<span aria-label="Chad" class="demo-icons-list-item" data-bs-original-title="Chad" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Chad"/>
+</span>
+<span aria-label="French Southern and Antarctic Lands" class="demo-icons-list-item" data-bs-original-title="French Southern and Antarctic Lands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.French_Southern_and_Antarctic_Lands"/>
+</span>
+<span aria-label="Togo" class="demo-icons-list-item" data-bs-original-title="Togo" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Togo"/>
+</span>
+<span aria-label="Thailand" class="demo-icons-list-item" data-bs-original-title="Thailand" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Thailand"/>
+</span>
+<span aria-label="Tajikistan" class="demo-icons-list-item" data-bs-original-title="Tajikistan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tajikistan"/>
+</span>
+<span aria-label="Tokelau" class="demo-icons-list-item" data-bs-original-title="Tokelau" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tokelau"/>
+</span>
+<span aria-label="Timor Leste" class="demo-icons-list-item" data-bs-original-title="Timor Leste" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Timor_Leste"/>
+</span>
+<span aria-label="Turkmenistan" class="demo-icons-list-item" data-bs-original-title="Turkmenistan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Turkmenistan"/>
+</span>
+<span aria-label="Tunisia" class="demo-icons-list-item" data-bs-original-title="Tunisia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tunisia"/>
+</span>
+<span aria-label="Tonga" class="demo-icons-list-item" data-bs-original-title="Tonga" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tonga"/>
+</span>
+<span aria-label="Turkey" class="demo-icons-list-item" data-bs-original-title="Turkey" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Turkey"/>
+</span>
+<span aria-label="Trinidad and Tobago" class="demo-icons-list-item" data-bs-original-title="Trinidad and Tobago" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Trinidad_and_Tobago"/>
+</span>
+<span aria-label="Tuvalu" class="demo-icons-list-item" data-bs-original-title="Tuvalu" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tuvalu"/>
+</span>
+<span aria-label="Tanzania" class="demo-icons-list-item" data-bs-original-title="Tanzania" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Tanzania"/>
+</span>
+<span aria-label="Ukraine" class="demo-icons-list-item" data-bs-original-title="Ukraine" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Ukraine"/>
+</span>
+<span aria-label="Uganda" class="demo-icons-list-item" data-bs-original-title="Uganda" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Uganda"/>
+</span>
+<span aria-label="United States Minor Islands" class="demo-icons-list-item" data-bs-original-title="United States Minor Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.United_States_Minor_Islands"/>
+</span>
+<span aria-label="United States of America" class="demo-icons-list-item" data-bs-original-title="United States of America" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.United_States_of_America"/>
+</span>
+<span aria-label="Uruguay" class="demo-icons-list-item" data-bs-original-title="Uruguay" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Uruguay"/>
+</span>
+<span aria-label="Uzbekistan" class="demo-icons-list-item" data-bs-original-title="Uzbekistan" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Uzbekistan"/>
+</span>
+<span aria-label="Vatican City" class="demo-icons-list-item" data-bs-original-title="Vatican City" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Vatican_City"/>
+</span>
+<span aria-label="Saint Vincent" class="demo-icons-list-item" data-bs-original-title="Saint Vincent" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Saint_Vincent"/>
+</span>
+<span aria-label="Venezuela" class="demo-icons-list-item" data-bs-original-title="Venezuela" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Venezuela"/>
+</span>
+<span aria-label="British Virgin Islands" class="demo-icons-list-item" data-bs-original-title="British Virgin Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.British_Virgin_Islands"/>
+</span>
+<span aria-label="Virgiin Islands" class="demo-icons-list-item" data-bs-original-title="Virgiin Islands" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Virgiin_Islands"/>
+</span>
+<span aria-label="Vietnam" class="demo-icons-list-item" data-bs-original-title="Vietnam" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Vietnam"/>
+</span>
+<span aria-label="Vanuatu" class="demo-icons-list-item" data-bs-original-title="Vanuatu" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Vanuatu"/>
+</span>
+<span aria-label="Wallis and Futuna" class="demo-icons-list-item" data-bs-original-title="Wallis and Futuna" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Wallis_and_Futuna"/>
+</span>
+<span aria-label="Samoa" class="demo-icons-list-item" data-bs-original-title="Samoa" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Samoa"/>
+</span>
+<span aria-label="Yemen" class="demo-icons-list-item" data-bs-original-title="Yemen" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Yemen"/>
+</span>
+<span aria-label="South Africa" class="demo-icons-list-item" data-bs-original-title="South Africa" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.South_Africa"/>
+</span>
+<span aria-label="Zambia" class="demo-icons-list-item" data-bs-original-title="Zambia" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Zambia"/>
+</span>
+<span aria-label="Zimbabwe" class="demo-icons-list-item" data-bs-original-title="Zimbabwe" data-bs-placement="top" data-bs-toggle="tooltip">
+    <Flag Country="TablerFlags.Zimbabwe"/>
+</span>
+
+</div>
+</div>
+</CardBody>
+</Card>
+</PageBody>
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", File.ReadAllText(Path.Combine(env.WebRootPath, "js/tabler.js")));
+        }
+    }
+}
