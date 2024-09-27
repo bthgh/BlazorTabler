@@ -35,6 +35,7 @@ This project is under development.
 - Cards
 - Carousel
 - Color Picker
+- Dropdown
 - Icon
 - Page
 

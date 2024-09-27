@@ -1,0 +1,15 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes"></div>
+
+@code
+{
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.DropdownDivider,
+                CssClass
+            )
+            .Trim();
+}

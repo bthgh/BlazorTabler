@@ -1,0 +1,166 @@
+@page "/Dropdowns"
+<PageHeader Title="Dropdowns"/>
+<PageBody>
+    <div class="row">
+        <div class="col-sm-6 col-lg-3">
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownHeader>Dropdown header</DropdownHeader>
+                <DropdownItem Href="#">
+                    <SvgIcon Icon="TablerSvgIcons.activity" CssClass="dropdown-item-icon"/>
+                    Item 1
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    <SvgIcon Icon="TablerSvgIcons.edit" CssClass="dropdown-item-icon"/>
+                    Item 2
+                </DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="radio"> Radio input</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="checkbox"> Checkbox input</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label" CssClass="form-switch"><input class="form-check-input m-0 me-2" type="checkbox"> Checkbox input</DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem Href="#">Dropdown item 1</DropdownItem>
+                <DropdownItem Href="#">Dropdown item 2</DropdownItem>
+                <DropdownItem Href="#" IsDisabled="true">Dropdown disabled</DropdownItem>
+                <DropdownItem Href="#" IsActive="true">Dropdown active</DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem Href="#">
+                    <Avatar ImageUrl="static/avatars/000m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Paweł Kuna
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    <Avatar ImageUrl="static/avatars/000m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Paweł Kuna
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    <Avatar Size="AvatarSizes.xs" CssClass="rounded me-2">JL</Avatar>
+                    Jeffie Lewzey
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    <Avatar ImageUrl="static/avatars/002m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Mallory Hulme
+                </DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem Href="#">
+                    <SvgIcon Icon="TablerSvgIcons.logout" CssClass="dropdown-item-icon"/>
+                    Logout
+                </DropdownItem>
+            </Dropdown>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem Href="#">Separated link</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+                <DropdownItem Href="#" IsActive="true">Active action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+                <DropdownItem Href="#" IsDisabled="true">Disabled action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownHeader>Dropdown header</DropdownHeader>
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownHeader>Dropdown header</DropdownHeader>
+                <DropdownItem Href="#">
+                    <SvgIcon Icon="TablerSvgIcons.settings" CssClass="dropdown-item-icon"/>
+                    Action
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    <SvgIcon Icon="TablerSvgIcons.edit" CssClass="dropdown-item-icon"/>
+                    Another action
+                </DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo" ShowArrow="true">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+            </Dropdown>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Href="#">
+                    Action
+                    <Badge BackgroundColor="TablerColors.primary" CssClass="ms-auto">12</Badge>
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    Another action
+                    <Badge BackgroundColor="TablerColors.green" CssClass="ms-auto"></Badge>
+                </DropdownItem>
+            </Dropdown>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <Dropdown CssClass="dropdown-menu-demo" data-bs-theme="dark">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo" data-bs-theme="dark">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem Href="#">Separated link</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo" ShowArrow="true" data-bs-theme="dark">
+                <DropdownItem Href="#">Action</DropdownItem>
+                <DropdownItem Href="#">Another action</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo" ShowArrow="true" data-bs-theme="dark">
+                <DropdownItem Href="#">
+                    Action
+                    <Badge BackgroundColor="TablerColors.primary" CssClass="ms-auto">12</Badge>
+                </DropdownItem>
+                <DropdownItem Href="#">
+                    Another action
+                    <Badge BackgroundColor="TablerColors.green" CssClass="ms-auto"></Badge>
+                </DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="checkbox"> Option 1</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="checkbox"> Option 2</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="checkbox"> Option 3</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="radio"> Option 1</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="radio"> Option 2</DropdownItem>
+                <DropdownItem Type="DropdownItemTypes.Label"><input class="form-check-input m-0 me-2" type="radio"> Option 3</DropdownItem>
+            </Dropdown>
+            <Dropdown CssClass="dropdown-menu-demo">
+                <DropdownItem >
+                    <Avatar ImageUrl="static/avatars/000m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Paweł Kuna
+                </DropdownItem>
+                <DropdownItem >
+                    <Avatar Size="AvatarSizes.xs" CssClass="rounded me-2">JL</Avatar>
+                    Jeffie Lewzey
+                </DropdownItem>
+                <DropdownItem >
+                    <Avatar ImageUrl="static/avatars/002m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Mallory Hulme
+                </DropdownItem>
+                <DropdownItem >
+                    <Avatar ImageUrl="static/avatars/003m.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Dunn Slane
+                </DropdownItem>
+                <DropdownItem >
+                    <Avatar ImageUrl="static/avatars/000f.jpg" Size="AvatarSizes.xs" CssClass="rounded me-2"/>
+                    Emmy Levet
+                </DropdownItem>
+            </Dropdown>
+        </div>
+    </div>
+</PageBody>
+
+@code
+{
+
+}
