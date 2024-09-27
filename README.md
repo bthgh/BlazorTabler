@@ -45,7 +45,25 @@ This project is under development.
 
 Documentation is available as a part of **BlazorTabler.Client** Project.  
 
- 
+## 📖 How to Run
+
+### Run with Docker
+
+1. Open a terminal in the BlazorTabler.Client directory that it is containing the Dockerfile and run :
+```
+docker build -t BlazorTabler .
+```
+2. To start a new container from your image, run:
+```
+docker run -p 8080:8080 BlazorTabler
+```
+### Run Locally
+Requirements:
+- Visual studio 2022 Or VS Code
+- Install .Net 8 
+
+Run the BlazorTabler.Client project. 
+
 ## License
 
 See the [LICENSE](https://github.com/bthgh/BlazorTabler/blob/main/LICENSE) file. 
