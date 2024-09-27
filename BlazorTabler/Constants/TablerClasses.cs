@@ -59,6 +59,14 @@ public static class TablerClasses
     
     //Color Picker
     public static string ColorPicker = "form-control d-block";
+    
+    //Dropdown
+    public static string DropdownMenu = "dropdown-menu";
+    public static string DropdownItem = "dropdown-item";
+    public static string DropdownDivider = "dropdown-divider";
+    public static string DropdownHeader = "dropdown-header";
+    public static string DropdownArrow = "dropdown-menu-arrow";
+    
     //Icon
     public const string Icon = "icon";
     

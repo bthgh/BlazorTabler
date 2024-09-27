@@ -1,0 +1,35 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+@if (Type is DropdownItemTypes.Link)
+{
+    <a href="@Href" @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+        @ChildContent
+    </a>
+}
+else if (Type is DropdownItemTypes.Label)
+{
+    <label @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+        @ChildContent
+    </label>
+}
+
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string Href { get; set; } = string.Empty;
+    [Parameter] public bool IsActive { get; set; }
+    [Parameter] public bool IsDisabled { get; set; }
+    [Parameter] public DropdownItemTypes Type { get; set; } = DropdownItemTypes.Link;
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.DropdownItem,
+                IsActive ? "active" : "",
+                IsDisabled ? "disabled" : "",
+                CssClass
+            )
+            .Trim();
+
+}
