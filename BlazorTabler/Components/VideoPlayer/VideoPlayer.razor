@@ -1,0 +1,35 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element"
+     id="@Id"
+     class="@Classes"
+     style="@CssStyle"
+     @attributes="@AdditionalAttributes"
+     data-plyr-provider="@Type.GetDescription()"
+     data-plyr-embed-id="@VideoCode">
+</div>
+
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public VideoPlayerTypes Type { get; set; } = VideoPlayerTypes.Youtube;
+    [Parameter] public required string VideoCode { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                CssClass
+            )
+            .Trim();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JsRuntime.InvokeVoidAsync("LoadCss", "./libs/plyr/dist/plyr.css");
+            await JsRuntime.InvokeVoidAsync("LoadJs", "./libs/plyr/dist/plyr.min.js");
+            await JsRuntime.InvokeVoidAsync("InitVideoPlayer", Id);
+        }
+    }
+
+}

@@ -13,28 +13,27 @@ function LoadCss(url) {
     }
 }
 
-function LoadJs(url, callback) {
+function LoadJs(url) {
     if (!document.querySelector(`script[src="${url}"]`)) {
         var script = document.createElement('script');
         script.src = url;
         script.async = false;
-        script.onload = callback;
         document.body.appendChild(script);
-    } else {
-        if (typeof callback === 'function') {
-            callback();
-        }
     }
 }
 
 function InitColorPicker(pickerId, swatches) {
-    LoadCss("libs/melloware/coloris/dist/coloris.min.css");
-    LoadJs("libs/melloware/coloris/dist/umd/coloris.min.js", function () {
-         Coloris({
-             el: `#${pickerId}`,
-             swatches: swatches
-         });
+    Coloris({
+        el: `#${pickerId}`,
+        swatches: swatches
     });
 }
+ 
+ 
 
+function InitVideoPlayer(id) {
+    if (window.Plyr) {
+        new Plyr(`#${id}`);
+    }
+}
 
