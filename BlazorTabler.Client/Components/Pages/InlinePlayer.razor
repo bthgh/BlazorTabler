@@ -1,0 +1,28 @@
+@page "/InlinePlayer"
+@rendermode InteractiveServer
+
+<PageHeader Title="Inline Player"/>
+<PageBody>
+    <CardRow>
+        <div class="col-lg-6">
+            <Card>
+                <CardBody>
+                    <CardTitle>Youtube Player</CardTitle>
+                    <VideoPlayer Id="player-youtube" Type="VideoPlayerTypes.Youtube" VideoCode="bTqVqk7FSmY"/>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-lg-6">
+            <Card>
+                <CardBody>
+                    <CardTitle>Vimeo Player</CardTitle>
+                    <VideoPlayer Id="player-charlotte" Type="VideoPlayerTypes.Vimeo" VideoCode="707012696"/>
+                </CardBody>
+            </Card>
+        </div>
+    </CardRow>
+</PageBody>
+
+@code {
+
+}
