@@ -1,0 +1,22 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<span @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+</span>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public TablerColors BackgroundColor { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Legend,
+                BackgroundColor.GetDescription(),
+                CssClass
+            )
+            .Trim();
+
+
+}

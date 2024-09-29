@@ -38,8 +38,10 @@ This project is under development.
 - Dropdown
 - Flag
 - Icon
+- Legend
 - Page
 - Placeholder
+- Tag
 - Video Player
 
 

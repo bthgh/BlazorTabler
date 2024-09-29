@@ -4,6 +4,7 @@ namespace BlazorTabler;
 
 public enum TablerColors
 {
+    [Description("")] None,
     [Description("bg-primary")] primary,
     [Description("bg-secondary")] secondary,
     [Description("bg-success")] success,
