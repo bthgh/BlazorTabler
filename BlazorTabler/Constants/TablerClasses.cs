@@ -73,8 +73,15 @@ public static class TablerClasses
     //Icon
     public const string Icon = "icon";
     
+    //Legend
+    public const string Legend = "legend";
     
-    
+    //Tag
+    public const string Tag = "tag";
+    public const string TagList = "tags-list";
+
+
+
 }
 
 
