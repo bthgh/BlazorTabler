@@ -39,6 +39,7 @@ This project is under development.
 - Flag
 - Icon
 - Page
+- Placeholder
 - Video Player
 
 
