@@ -1,0 +1,30 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    <h5 class="modal-title">@Title</h5>
+    @if (IsClosable)
+    {
+        <ModalCloseButton/>
+    }
+</div>
+
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public bool IsClosable { get; set; } = true;
+
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.ModalHeader,
+                CssClass
+            )
+            .Trim();
+
+
+}
+

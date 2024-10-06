@@ -76,6 +76,13 @@ public static class TablerClasses
     //Legend
     public const string Legend = "legend";
     
+    //Modal
+    public const string Modal = "modal modal-blur fade";
+    public const string ModalHeader = "modal-header";
+    public const string ModalBody = "modal-body";
+    public const string ModalFooter = "modal-footer";
+    public const string ModalScrollable = "modal-dialog-scrollable";
+    
     //Tag
     public const string Tag = "tag";
     public const string TagList = "tags-list";

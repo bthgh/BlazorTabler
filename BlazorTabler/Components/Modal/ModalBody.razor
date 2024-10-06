@@ -1,0 +1,23 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @ChildContent
+</div>
+
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.ModalBody,
+                CssClass
+            )
+            .Trim();
+
+
+}

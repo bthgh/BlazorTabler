@@ -1,0 +1,35 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog @Size.GetDescription() modal-dialog-centered @(IsScrollable? TablerClasses.ModalScrollable : "")" role="document">
+        <div class="modal-content">
+            @if (Status is not ModalStatus.None)
+            {
+                <div class="modal-status @Status.GetDescription()"></div>   
+            }
+            @ChildContent
+        </div>
+    </div>
+</div>
+
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public ModalSizes Size { get; set; } = ModalSizes.Normal;
+    [Parameter] public bool IsScrollable { get; set; }
+    [Parameter] public ModalStatus Status { get; set; } = ModalStatus.None;
+    
+
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Modal,
+                CssClass
+            )
+            .Trim();
+
+
+}
