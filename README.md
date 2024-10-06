@@ -39,6 +39,7 @@ This project is under development.
 - Flag
 - Icon
 - Legend
+- Modal
 - Page
 - Placeholder
 - Tag
