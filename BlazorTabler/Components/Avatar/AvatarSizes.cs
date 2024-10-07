@@ -4,6 +4,7 @@ namespace BlazorTabler;
 
 public enum AvatarSizes
 {
+    [Description("")] Standard,
     [Description("avatar-xxs")] xxs,
     [Description("avatar-xs")] xs,
     [Description("avatar-sm")] sm,
