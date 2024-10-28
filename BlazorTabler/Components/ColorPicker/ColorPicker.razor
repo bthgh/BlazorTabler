@@ -24,7 +24,8 @@
     private string Classes =>
         string.Join(" ",
                 TablerClasses.ColorPicker,
-                CssClass
+                CssClass,
+                Id
             )
             .Trim();
 
@@ -32,9 +33,9 @@
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
-        {
-            await JsRuntime.InvokeVoidAsync("LoadCss", "./libs/melloware/coloris/dist/coloris.min.css");
-            await JsRuntime.InvokeVoidAsync("LoadJs", "./libs/melloware/coloris/dist/umd/coloris.min.js");
+        { 
+            await JsRuntime.InvokeAsync<object>("LoadCss", "./libs/melloware/coloris/dist/coloris.min.css");
+            await JsRuntime.InvokeAsync<object>("LoadJs", "./libs/melloware/coloris/dist/umd/coloris.min.js");
             await JsRuntime.InvokeVoidAsync("InitColorPicker", Id, Swatches);
         }
     }

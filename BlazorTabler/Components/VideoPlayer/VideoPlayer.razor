@@ -24,10 +24,8 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (firstRender) 
         {
-            await JsRuntime.InvokeVoidAsync("LoadCss", "./libs/plyr/dist/plyr.css");
-            await JsRuntime.InvokeVoidAsync("LoadJs", "./libs/plyr/dist/plyr.min.js");
             await JsRuntime.InvokeVoidAsync("InitVideoPlayer", Id);
         }
     }
