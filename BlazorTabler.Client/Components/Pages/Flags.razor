@@ -1,6 +1,5 @@
 @page "/Flags" 
 @inject IJSRuntime JSRuntime
-@inject IWebHostEnvironment env
 @rendermode InteractiveServer
 
 <PageHeader Title="Flags"/>
@@ -761,7 +760,7 @@
     {
         if (firstRender)
         {
-            await JSRuntime.InvokeVoidAsync("eval", File.ReadAllText(Path.Combine(env.WebRootPath, "js/tabler.js")));
+            await JSRuntime.InvokeVoidAsync("InitTooltips");
         }
     }
 }
