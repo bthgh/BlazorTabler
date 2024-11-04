@@ -1,0 +1,47 @@
+@namespace BlazorTabler
+
+<CascadingValue Value="@(this)" IsFixed="true">
+    @ChildContent
+</CascadingValue>
+
+<div class="card mb-5">
+    <div class="table-responsive">
+        <table
+            class="table table-vcenter card-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in tableItems)
+            {
+                <tr>
+                    <td >@item.Name</td>
+                    <td class="text-secondary">
+                        @item.Type
+                    </td>
+                    <td class="text-secondary">
+                        @item.Description
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private List<BTPresentationTableItem> tableItems = new();
+
+    internal void AddItem(BTPresentationTableItem item)
+    {
+        tableItems.Add(item);
+        StateHasChanged();
+    }
+
+}

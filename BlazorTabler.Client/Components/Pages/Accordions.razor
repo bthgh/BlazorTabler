@@ -1,9 +1,10 @@
 @page "/Accordions"
+@rendermode InteractiveServer
 
 <PageHeader Title="Accordion"/>
 <PageBody>
-    <Card>
-        <CardBody>
+    <BTPresentation SourceCodeContent="@_sourcecode">
+        <UIContent>
             <Accordion Id="accordion-example">
                 <AccordionItem Title="Accordion Item #1" IsExpanded="true">
                     <Content>
@@ -26,10 +27,48 @@
                     </Content>
                 </AccordionItem>
             </Accordion>
-        </CardBody>
-    </Card>
+        </UIContent>
+        <DocumentationContent>
+            <BTPresentBaseClass/>
+            <CardTitle>Accordion Parameters</CardTitle>
+            <BTPresentationTable> 
+                <BTPresentationTableItem Name="ChildContent" Type="RenderFragment" Description="The ChildContent of Accordion is list of AccordionItems."/> 
+            </BTPresentationTable>
+            <CardTitle>AccordionItem Parameters</CardTitle>
+            <BTPresentationTable>
+                <BTPresentationTableItem Name="ChildContent" Type="RenderFragment" Description="The Html Content for the Accordion Item."/>
+                <BTPresentationTableItem Name="Title" Type="String" Description="A string parameter that defines the title for the AccordionItem"/>
+                <BTPresentationTableItem Name="IsExpanded" Type="Bool" Description="A boolean parameter that indicates whether the component is expanded or collapsed. When set to true, the component’s content is visible; when false, the content is hidden. Default value is False."/>
+            </BTPresentationTable>
+        </DocumentationContent>
+    </BTPresentation>
 </PageBody>
 
 @code {
-    
+
+    private string _sourcecode = @"
+        <Accordion Id=""accordion-example"">
+            <AccordionItem Title=""Accordion Item #1"" IsExpanded=""true"">
+                <Content>
+                    <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </Content>
+            </AccordionItem>
+            <AccordionItem Title=""Accordion Item #2"">
+                <Content>
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </Content>
+            </AccordionItem>
+            <AccordionItem Title=""Accordion Item #3"">
+                <Content>
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </Content>
+            </AccordionItem>
+            <AccordionItem Title=""Accordion Item #4"">
+                <Content>
+                    <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </Content>
+            </AccordionItem>
+        </Accordion>
+    ";
+
 }
