@@ -12,14 +12,13 @@
             <div class="d-flex align-items-center">
                 <div class="subheader">Sales</div>
                 <div class="ms-auto lh-1">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle text-secondary" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                    </div>
+                    <Dropdown Title="Last 7 days" TitleCssClass="text-secondary" IsButton="false">
+                        <DropdownMenu>
+                            <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                            <DropdownItem Href="#">Last 30 days</DropdownItem>
+                            <DropdownItem Href="#">Last 3 months</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </div>
             </div>
             <div class="h1 mb-3">75%</div>
@@ -32,7 +31,7 @@
                     </span>
                 </div>
             </div>
-            <CardProgress CurrentValue="75"/> 
+            <CardProgress CurrentValue="75"/>
         </CardBody>
     </Card>
 </div>
@@ -42,14 +41,13 @@
             <div class="d-flex align-items-center">
                 <div class="subheader">Revenue</div>
                 <div class="ms-auto lh-1">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle text-secondary" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                    </div>
+                    <Dropdown Title="Last 7 days" TitleCssClass="text-secondary" IsButton="false">
+                        <DropdownMenu>
+                            <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                            <DropdownItem Href="#">Last 30 days</DropdownItem>
+                            <DropdownItem Href="#">Last 3 months</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </div>
             </div>
             <div class="d-flex align-items-baseline">
@@ -70,14 +68,13 @@
             <div class="d-flex align-items-center">
                 <div class="subheader">New clients</div>
                 <div class="ms-auto lh-1">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle text-secondary" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                    </div>
+                    <Dropdown Title="Last 7 days" TitleCssClass="text-secondary" IsButton="false">
+                        <DropdownMenu>
+                            <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                            <DropdownItem Href="#">Last 30 days</DropdownItem>
+                            <DropdownItem Href="#">Last 3 months</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </div>
             </div>
             <div class="d-flex align-items-baseline">
@@ -99,14 +96,13 @@
             <div class="d-flex align-items-center">
                 <div class="subheader">Active users</div>
                 <div class="ms-auto lh-1">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle text-secondary" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                        </div>
-                    </div>
+                    <Dropdown Title="Last 7 days" TitleCssClass="text-secondary" IsButton="false">
+                        <DropdownMenu>
+                            <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                            <DropdownItem Href="#">Last 30 days</DropdownItem>
+                            <DropdownItem Href="#">Last 3 months</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                 </div>
             </div>
             <div class="d-flex align-items-baseline">
@@ -172,7 +168,7 @@
                         <div class="col-auto">
                             <Avatar CssClass="bg-twitter text-white">
                                 <SvgIcon Icon="TablerSvgIcons.brand_twitter"/>
-                            </Avatar> 
+                            </Avatar>
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
@@ -193,7 +189,7 @@
                         <div class="col-auto">
                             <Avatar CssClass="bg-facebook text-white">
                                 <SvgIcon Icon="TablerSvgIcons.brand_facebook"/>
-                            </Avatar> 
+                            </Avatar>
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
@@ -281,7 +277,7 @@
             <div class="text-secondary">yesterday</div>
         </div>
         <div class="col-auto align-self-center">
-            <Badge BackgroundColor="TablerColors.primary"/> 
+            <Badge BackgroundColor="TablerColors.primary"/>
         </div>
     </div>
 </div>
@@ -698,167 +694,167 @@
             <table class="table card-table table-vcenter">
                 <tbody>
                 <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Extend the data model.</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
-                                        August 04, 2021
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            2/7
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            3
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/000m.jpg"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Verify the event flow.</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
-                                        January 03, 2019
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            3/10
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            6
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm">JL</Avatar>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Database backup and maintenance</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
-                                        December 28, 2018
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            0/6
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            1
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/002m.jpg"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Identify the implementation team.</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
-                                        November 07, 2020
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            6/10
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            12
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/003m.jpg"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Define users and workflow</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.escalator"/>
-                                        November 23, 2021
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            3/7
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            5
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/000f.jpg"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1 pe-0">
-                                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
-                                    </td>
-                                    <td class="w-100">
-                                        <a href="#" class="text-reset">Check Pull Requests</a>
-                                    </td>
-                                    <td class="text-nowrap text-secondary">
-                                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
-                                        January 14, 2021
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.check"/>
-                                            2/9
-                                        </a>
-                                    </td>
-                                    <td class="text-nowrap">
-                                        <a href="#" class="text-secondary">
-                                            <SvgIcon Icon="TablerSvgIcons.message"/>
-                                            3
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/001f.jpg"/>
-                                    </td>
-                                </tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Extend the data model.</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
+                        August 04, 2021
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            2/7
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            3
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/000m.jpg"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Verify the event flow.</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
+                        January 03, 2019
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            3/10
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            6
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm">JL</Avatar>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Database backup and maintenance</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
+                        December 28, 2018
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            0/6
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            1
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/002m.jpg"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Identify the implementation team.</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
+                        November 07, 2020
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            6/10
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            12
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/003m.jpg"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task">
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Define users and workflow</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.escalator"/>
+                        November 23, 2021
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            3/7
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            5
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/000f.jpg"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-1 pe-0">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" aria-label="Select task" checked>
+                    </td>
+                    <td class="w-100">
+                        <a href="#" class="text-reset">Check Pull Requests</a>
+                    </td>
+                    <td class="text-nowrap text-secondary">
+                        <SvgIcon Icon="TablerSvgIcons.calendar"/>
+                        January 14, 2021
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.check"/>
+                            2/9
+                        </a>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="#" class="text-secondary">
+                            <SvgIcon Icon="TablerSvgIcons.message"/>
+                            3
+                        </a>
+                    </td>
+                    <td>
+                        <Avatar Size="AvatarSizes.sm" ImageUrl="./static/avatars/001f.jpg"/>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -930,17 +926,12 @@
     </td>
     <td>$887</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -968,17 +959,12 @@
     </td>
     <td>$1200</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1006,17 +992,12 @@
     </td>
     <td>$534</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1044,17 +1025,12 @@
     </td>
     <td>$1500</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1082,17 +1058,12 @@
     </td>
     <td>$648</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1120,17 +1091,12 @@
     </td>
     <td>$300</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1158,17 +1124,12 @@
     </td>
     <td>$2500</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 <tr>
@@ -1196,17 +1157,12 @@
     </td>
     <td>$940</td>
     <td class="text-end">
-        <span class="dropdown">
-            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-            <div class="dropdown-menu dropdown-menu-end">
-                <a class="dropdown-item" href="#">
-                    Action
-                </a>
-                <a class="dropdown-item" href="#">
-                    Another action
-                </a>
-            </div>
-        </span>
+        <Dropdown Title="Actions">
+            <DropdownMenu>
+                <DropdownItem href="#">Action</DropdownItem>
+                <DropdownItem href="#">Another action</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
     </td>
 </tr>
 </tbody>

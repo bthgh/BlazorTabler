@@ -3,19 +3,21 @@
 
 
 <div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    <a href="#" class="@(IsButton ? "btn" : "") dropdown-toggle align-text-top @TitleCssClass" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Title</a>
     @ChildContent
 </div>
 
 @code
 {
     [Parameter] public RenderFragment? ChildContent { get; set; }
-    [Parameter] public bool ShowArrow { get; set; }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string? TitleCssClass { get; set; }
+    [Parameter] public bool IsButton { get; set; } = true;
 
 
     private string Classes =>
         string.Join(" ",
-                TablerClasses.DropdownMenu,
-                ShowArrow ? TablerClasses.DropdownArrow : "",
+                TablerClasses.Dropdown,
                 CssClass
             )
             .Trim();

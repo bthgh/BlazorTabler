@@ -61,7 +61,8 @@ public static class TablerClasses
     public static string ColorPicker = "form-control d-block";
     
     //Dropdown
-    public static string DropdownMenu = "dropdown-menu";
+    public static string Dropdown = "dropdown";
+    public static string DropdownMenu = "dropdown-menu dropdown-menu-end";
     public static string DropdownItem = "dropdown-item";
     public static string DropdownDivider = "dropdown-divider";
     public static string DropdownHeader = "dropdown-header";
