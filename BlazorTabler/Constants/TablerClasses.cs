@@ -84,6 +84,12 @@ public static class TablerClasses
     public const string ModalFooter = "modal-footer";
     public const string ModalScrollable = "modal-dialog-scrollable";
     
+    //Progress
+    public const string Progress = "progress";
+    public const string ProgressSeparated = "progress-separated";
+    public const string ProgressSM = "progress-sm";
+    public const string ProgressBar = "progress-bar";
+    
     //Tag
     public const string Tag = "tag";
     public const string TagList = "tags-list";

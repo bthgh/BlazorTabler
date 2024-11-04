@@ -1,0 +1,22 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public bool IsSeparated { get; set; }
+    [Parameter] public bool IsSmall { get; set; }
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.Progress,
+                IsSeparated ? TablerClasses.ProgressSeparated : "",
+                IsSmall ? TablerClasses.ProgressSM : "",
+                CssClass
+            )
+            .Trim();
+
+}

@@ -1,0 +1,24 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+ 
+<div @ref="@Element" id="@Id" class="@Classes" style="width: @CurrentValue% @CssStyle" role="progressbar" aria-valuenow="@CurrentValue"
+     aria-valuemin="@MinValue" aria-valuemax="@MaxValue" aria-label="@CurrentValue% Complete" @attributes="@AdditionalAttributes">
+    <span class="visually-hidden">@CurrentValue% Complete</span>
+</div>
+
+@code {
+    [Parameter] public double CurrentValue { get; set; } = 0;
+    [Parameter] public double MinValue { get; set; } = 0;
+    [Parameter] public double MaxValue { get; set; } = 100;
+    [Parameter] public TablerColors BackgroundColor { get; set; } = TablerColors.primary;
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.ProgressBar,
+                BackgroundColor.GetDescription(),
+                CssClass
+            )
+            .Trim();
+
+}

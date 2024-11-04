@@ -31,7 +31,9 @@
                     </span>
                 </div>
             </div>
-            <CardProgress CurrentValue="75"/>
+            <Progress>
+                <ProgressBar CurrentValue="75"/>
+            </Progress>
         </CardBody>
     </Card>
 </div>
@@ -231,11 +233,11 @@
     <Card>
         <CardBody>
             <p class="mb-3">Using Storage <strong>6854.45 MB </strong>of 8 GB</p>
-            <div class="progress progress-separated mb-3">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-label="Regular"></div>
-                <div class="progress-bar bg-info" role="progressbar" style="width: 19%" aria-label="System"></div>
-                <div class="progress-bar bg-success" role="progressbar" style="width: 9%" aria-label="Shared"></div>
-            </div>
+            <Progress IsSeparated="true" CssClass="mb-3">
+                <ProgressBar BackgroundColor="TablerColors.primary" CurrentValue="44"/>
+                <ProgressBar BackgroundColor="TablerColors.info" CurrentValue="19"/>
+                <ProgressBar BackgroundColor="TablerColors.success" CurrentValue="9"/>
+            </Progress> 
             <div class="row">
                 <div class="col-auto d-flex align-items-center pe-2">
                     <TablerLegend BackgroundColor="TablerColors.primary" CssClass="me-2"/>
@@ -624,63 +626,63 @@
                 <td>Instagram</td>
                 <td>3,550</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 71.0%"></div>
-                    </div>
+                    <Progress>
+                        <ProgressBar CurrentValue="71"/>
+                    </Progress> 
                 </td>
             </tr>
             <tr>
                 <td>Twitter</td>
                 <td>1,798</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 35.96%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="35.96"/>
+                                        </Progress>
                 </td>
             </tr>
             <tr>
                 <td>Facebook</td>
                 <td>1,245</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 24.9%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="24.9"/>
+                                        </Progress>
                 </td>
             </tr>
             <tr>
                 <td>TikTok</td>
                 <td>986</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 19.72%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="19.72"/>
+                                        </Progress>
                 </td>
             </tr>
             <tr>
                 <td>Pinterest</td>
                 <td>854</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 17.08%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="17.8"/>
+                                        </Progress>
                 </td>
             </tr>
             <tr>
                 <td>VK</td>
                 <td>650</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 13.0%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="13"/>
+                                        </Progress>
                 </td>
             </tr>
             <tr>
                 <td>Pinterest</td>
                 <td>420</td>
                 <td class="w-50">
-                    <div class="progress progress-xs">
-                        <div class="progress-bar bg-primary" style="width: 8.4%"></div>
-                    </div>
+                    <Progress>
+                                            <ProgressBar CurrentValue="8.4"/>
+                                        </Progress>
                 </td>
             </tr>
             </tbody>
