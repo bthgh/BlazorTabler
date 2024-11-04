@@ -1,0 +1,35 @@
+@namespace BlazorTabler
+<CardTabs>
+    <CardTab Title="Preview" IsActive="true">
+        <Content>
+            @UIContent
+        </Content>
+    </CardTab>
+    @if (DocumentationContent is not null)
+    {
+        <CardTab Title="Documentation">
+            <Content>
+                @DocumentationContent
+            </Content>
+        </CardTab>
+    }
+    @if (SourceCodeContent is not null)
+    {
+        <CardTab Title="Source Code">
+            <Content>
+                <pre>
+                    <code>
+                         @SourceCodeContent
+                    </code>
+                </pre>
+            </Content>
+        </CardTab>
+    }
+</CardTabs>
+
+@code
+{
+    [Parameter] public required RenderFragment UIContent { get; set; }
+    [Parameter] public RenderFragment? DocumentationContent { get; set; }
+    [Parameter] public string? SourceCodeContent { get; set; }
+}

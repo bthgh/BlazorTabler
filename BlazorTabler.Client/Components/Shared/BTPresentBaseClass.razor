@@ -1,0 +1,12 @@
+@namespace BlazorTabler
+
+<CardTitle>Base Class</CardTitle>
+<p>This component inherits from <strong>TablerComponentBase</strong> Class. </p>
+<BTPresentationTable>
+    <BTPresentationTableItem Name="Id" Type="String" Description="A parameter for specifying a unique identifier for the component's HTML element. If you dont specify the Id, it will be assigned automatically." />
+    <BTPresentationTableItem Name="CssClass" Type="String" Description="A parameter that allows you to specify custom CSS classes to style the component. This parameter accepts a string containing CSS class names." />
+    <BTPresentationTableItem Name="CssStyle" Type="String" Description="A parameter for inline styling of the component. This parameter accepts a string containing CSS properties in the form of inline styles." />
+    <BTPresentationTableItem Name="Element" Type="ElementReference" Description="An ElementReference to the underlying HTML element rendered by the component. This allows interaction with the DOM element directly through JavaScript interop." />
+    <BTPresentationTableItem Name="AdditionalAttributes" Type="Dictionary<string, object>" Description="A dictionary that captures any additional HTML attributes that aren’t explicitly defined as parameters. " />
+    <BTPresentationTableItem Name="JsRuntime" Type="IJSRuntime" Description="An injected instance of IJSRuntime, which provides access to JavaScript interop functionalities in Blazor." />
+</BTPresentationTable>

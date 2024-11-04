@@ -1,0 +1,15 @@
+@namespace BlazorTabler
+
+@code {
+    [CascadingParameter] internal BTPresentationTable Parent { get; set; } = default!;
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public string? Type { get; set; }
+    [Parameter] public string? Description { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Parent.AddItem(this);
+    }
+
+}
