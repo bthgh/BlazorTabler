@@ -42,6 +42,7 @@ This project is under development.
 - Modal
 - Page
 - Placeholder
+- ProgressBar
 - Tag
 - Video Player
 
