@@ -1,0 +1,239 @@
+@page "/Colors"
+@using BlazorTabler.ExtensionMethods
+
+<PageHeader Title="Colors"/>
+<PageBody>
+<Card>
+<CardBody>
+<div class="table-responsive">
+<table class="table text-center">
+<tr>
+    <td>
+        <Avatar CssClass="@(TablerColors.Blue.GetDescription() + " " + TablerTextForegroundColors.Blue.GetDescription())">bl</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Azure.GetDescription() + " " + TablerTextForegroundColors.Azure.GetDescription())">az</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Indigo.GetDescription() + " " + TablerTextForegroundColors.Indigo.GetDescription())">in</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Purple.GetDescription() + " " + TablerTextForegroundColors.Purple.GetDescription())">pu</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Pink.GetDescription() + " " + TablerTextForegroundColors.Pink.GetDescription())">pi</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Red.GetDescription() + " " + TablerTextForegroundColors.Red.GetDescription())">re</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Orange.GetDescription() + " " + TablerTextForegroundColors.Orange.GetDescription())">or</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Yellow.GetDescription() + " " + TablerTextForegroundColors.Yellow.GetDescription())">ye</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Lime.GetDescription() + " " + TablerTextForegroundColors.Lime.GetDescription())">li</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Green.GetDescription() + " " + TablerTextForegroundColors.Green.GetDescription())">gr</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Teal.GetDescription() + " " + TablerTextForegroundColors.Teal.GetDescription())">te</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Cyan.GetDescription() + " " + TablerTextForegroundColors.Cyan.GetDescription())">cy</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Dark.GetDescription() + " " + TablerTextForegroundColors.Dark.GetDescription())">da</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerColors.Muted.GetDescription() + " " + TablerTextForegroundColors.Muted.GetDescription())">mu</Avatar>
+    </td>
+</tr>
+<tr>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Blue.GetDescription()">bl</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Azure.GetDescription()">az</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Indigo.GetDescription()">in</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Purple.GetDescription()">pu</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Pink.GetDescription()">pi</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Red.GetDescription()">re</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Orange.GetDescription()">or</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Yellow.GetDescription()">ye</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Lime.GetDescription()">li</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Green.GetDescription()">gr</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Teal.GetDescription()">te</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Cyan.GetDescription()">cy</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Dark.GetDescription()">da</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Muted.GetDescription()">mu</Avatar>
+    </td>
+</tr>
+<tr>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Blue.GetDescription() + " " + TablerColors.Transparent.GetDescription())">bl</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Azure.GetDescription() + " " + TablerColors.Transparent.GetDescription())">az</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Indigo.GetDescription() + " " + TablerColors.Transparent.GetDescription())">in</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Purple.GetDescription() + " " + TablerColors.Transparent.GetDescription())">pu</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Pink.GetDescription() + " " + TablerColors.Transparent.GetDescription())">pi</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Red.GetDescription() + " " + TablerColors.Transparent.GetDescription())">re</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Orange.GetDescription() + " " + TablerColors.Transparent.GetDescription())">or</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Yellow.GetDescription() + " " + TablerColors.Transparent.GetDescription())">ye</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Lime.GetDescription() + " " + TablerColors.Transparent.GetDescription())">li</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Green.GetDescription() + " " + TablerColors.Transparent.GetDescription())">gr</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Teal.GetDescription() + " " + TablerColors.Transparent.GetDescription())">te</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Cyan.GetDescription() + " " + TablerColors.Transparent.GetDescription())">cy</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Dark.GetDescription() + " " + TablerColors.Transparent.GetDescription())">da</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Muted.GetDescription() + " " + TablerColors.Transparent.GetDescription())">mu</Avatar>
+    </td>
+</tr>
+<tr class="bg-dark text-white">
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Blue.GetDescription() + " " + TablerColors.Transparent.GetDescription())">bl</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Azure.GetDescription() + " " + TablerColors.Transparent.GetDescription())">az</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Indigo.GetDescription() + " " + TablerColors.Transparent.GetDescription())">in</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Purple.GetDescription() + " " + TablerColors.Transparent.GetDescription())">pu</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Pink.GetDescription() + " " + TablerColors.Transparent.GetDescription())">pi</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Red.GetDescription() + " " + TablerColors.Transparent.GetDescription())">re</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Orange.GetDescription() + " " + TablerColors.Transparent.GetDescription())">or</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Yellow.GetDescription() + " " + TablerColors.Transparent.GetDescription())">ye</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Lime.GetDescription() + " " + TablerColors.Transparent.GetDescription())">li</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Green.GetDescription() + " " + TablerColors.Transparent.GetDescription())">gr</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Teal.GetDescription() + " " + TablerColors.Transparent.GetDescription())">te</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Cyan.GetDescription() + " " + TablerColors.Transparent.GetDescription())">cy</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.White.GetDescription() + " " + TablerColors.Transparent.GetDescription())">wh</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@(TablerTextColors.Muted.GetDescription() + " " + TablerColors.Transparent.GetDescription())">mu</Avatar>
+    </td>
+</tr>
+<tr class="bg-dark text-white">
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Blue.GetDescription()">bl</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Azure.GetDescription()">az</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Indigo.GetDescription()">in</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Purple.GetDescription()">pu</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Pink.GetDescription()">pi</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Red.GetDescription()">re</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Orange.GetDescription()">or</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Yellow.GetDescription()">ye</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Lime.GetDescription()">li</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Green.GetDescription()">gr</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Teal.GetDescription()">te</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Cyan.GetDescription()">cy</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.White.GetDescription()">wh</Avatar>
+    </td>
+    <td>
+        <Avatar CssClass="@TablerColorsLight.Muted.GetDescription()">mu</Avatar>
+    </td>
+
+</tr>
+</table>
+</div>
+</CardBody>
+</Card>
+</PageBody>
+
+@code {
+
+}
