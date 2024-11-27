@@ -1,0 +1,159 @@
+@page "/CardActions"
+
+<PageHeader Title="Card actions"/>
+<PageBody>
+<CardRow>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="Sample card"></CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card> 
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="Card with action"> 
+            <CardActions>
+                <Button href="#" ButtonColor="ButtonColors.primary">
+                    <SvgIcon Icon="TablerSvgIcons.plus"></SvgIcon>
+                    Add new
+                </Button>
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="Card title">
+            <CardActions>
+                <Button href="#">
+                    <SvgIcon Icon="TablerSvgIcons.phone"/>
+                    Phone
+                </Button>
+                <Button href="#">
+                    <SvgIcon Icon="TablerSvgIcons.mail"/>
+                    Email
+                </Button> 
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader AvatarUrl="./static/avatars/000m.jpg"
+                    Title="Paweł Kuna" Subtitle="UI Designer">
+            <CardActions>
+                <Button href="#">
+                    <SvgIcon Icon="TablerSvgIcons.phone"/>
+                    Phone
+                </Button>
+                <Button href="#">
+                    <SvgIcon Icon="TablerSvgIcons.mail"/>
+                    Email
+                </Button>
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="With description" Subtitle="Lorem ipsum dolor sit amet consectetur adipisicing."/>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card> 
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="With description" Subtitle="Lorem ipsum dolor sit amet consectetur adipisicing.">
+            <CardActions>
+                <Button href="#" ButtonColor="ButtonColors.primary">
+                    Create new job
+                </Button>  
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card> 
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader AvatarUrl="./static/avatars/003m.jpg" Title="Dunn Slane" Subtitle="Research Nurse">
+            <CardActions>
+                <Dropdown>
+                    <DropdownButton ButtonType="DropdownButtonTypes.ActionButton">
+                        <SvgIcon Icon="TablerSvgIcons.dots_vertical"/>
+                    </DropdownButton> 
+                        <DropdownMenu>
+                            <DropdownItem Href="#">Edit user</DropdownItem>
+                            <DropdownItem Href="#">Change permissions</DropdownItem>
+                            <DropdownItem Href="#" CssClass="text-danger">Delete user</DropdownItem>
+                        </DropdownMenu> 
+                </Dropdown> 
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-md-6">
+    <Card>
+        <CardHeader Title="Card actions">
+            <CardActions> 
+                <Button Type="ButtonTypes.ActionButton">
+                    <SvgIcon Icon="TablerSvgIcons.refresh"/>
+                </Button>
+                <Button Type="ButtonTypes.ActionButton">
+                    <SvgIcon Icon="TablerSvgIcons.chevron_up"/>
+                </Button>
+                <Button Type="ButtonTypes.ActionButton">
+                    <SvgIcon Icon="TablerSvgIcons.dots_vertical"/>
+                </Button>
+                <Button Type="ButtonTypes.ActionButton">
+                    <SvgIcon Icon="TablerSvgIcons.x"/>
+                </Button>
+            </CardActions>
+        </CardHeader>
+        <CardBody CssClass="p-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-100" preserveAspectRatio="none" width="400" height="200" viewBox="0 0 400 200" fill="transparent" stroke="var(--tblr-border-color, #b8cef1)">
+                <line x1="0" y1="0" x2="400" y2="200"></line>
+                <line x1="0" y1="200" x2="400" y2="0"></line>
+            </svg>
+        </CardBody>
+    </Card> 
+</div>
+</CardRow> 
+</PageBody>

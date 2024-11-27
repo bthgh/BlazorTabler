@@ -27,6 +27,7 @@ public static class TablerClasses
     public const string Button = "btn";
     public const string ButtonActive = "active";
     public const string ButtonDisabled = "disabled";
+    public const string ActionButton = "btn-action";
     
     
     //Card

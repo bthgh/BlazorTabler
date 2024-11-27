@@ -1,0 +1,24 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+
+<a href="#" @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    @ChildContent
+</a>
+ 
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }  
+    [Parameter] public DropdownButtonTypes ButtonType { get; set; } = DropdownButtonTypes.Default;
+
+
+    private string Classes =>
+        string.Join(" ",
+                ButtonType.GetDescription(),
+                "dropdown-toggle align-text-top",
+                CssClass
+            )
+            .Trim();
+
+}
