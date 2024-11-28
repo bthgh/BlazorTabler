@@ -1,0 +1,68 @@
+@page "/DataGrids"
+
+<PageHeader Title="Data Grid"/>
+<PageBody>
+    <Card>
+        <CardHeader Title="Base info"/>
+        <CardBody>
+            <DataGrid>
+                <DataGridItem Title="Registrar"> 
+                    Third Party
+                </DataGridItem>
+                <DataGridItem Title="Nameservers">
+                    Third Party
+                </DataGridItem>
+                <DataGridItem Title="Port number">
+                    3306
+                </DataGridItem>
+                <DataGridItem Title="Expiration date">
+                    -
+                </DataGridItem>
+                <DataGridItem Title="Creator">
+                    <div class="d-flex align-items-center">
+                        <Avatar ImageUrl="./static/avatars/000m.jpg" Size="AvatarSizes.xs" CssClass="me-2 rounded"/> 
+                        Paweł Kuna
+                    </div>
+                    </DataGridItem>
+                <DataGridItem Title="Age"> 
+                    15 days
+                </DataGridItem>
+                <DataGridItem Title="Edge network">
+                    <span class="status status-green">
+                        Active
+                    </span>
+                </DataGridItem>
+                <DataGridItem Title="Avatars list">  
+                    <div class="avatar-list avatar-list-stacked">
+                        <Avatar ImageUrl="./static/avatars/000m.jpg" Size="AvatarSizes.xs" CssClass="rounded"/>
+                        <Avatar Size="AvatarSizes.xs" CssClass="rounded">JL</Avatar>
+                        <Avatar ImageUrl="./static/avatars/002m.jpg" Size="AvatarSizes.xs" CssClass="rounded"/>
+                        <Avatar ImageUrl="./static/avatars/003m.jpg" Size="AvatarSizes.xs" CssClass="rounded"/>
+                        <Avatar ImageUrl="./static/avatars/000f.jpg" Size="AvatarSizes.xs" CssClass="rounded"/>
+                        <Avatar Size="AvatarSizes.xs" CssClass="rounded">+3</Avatar>
+                    </div> 
+                </DataGridItem>
+                <DataGridItem Title="Checkbox">
+                        <label class="form-check">
+                            <input class="form-check-input" type="checkbox" checked>
+                            <span class="form-check-label">Click me</span>
+                        </label>
+                </DataGridItem>
+                <DataGridItem Title="Icon"> 
+                        <SvgIcon Icon="TablerSvgIcons.check"/>
+                        Checked
+                </DataGridItem>
+                <DataGridItem Title="Form control"> 
+                        <input type="text" class="form-control form-control-flush" placeholder="Input placeholder">
+                </DataGridItem>
+                <DataGridItem Title="Longer description"> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </DataGridItem>
+            </DataGrid>
+        </CardBody>
+    </Card>
+</PageBody>
+
+@code {
+
+}

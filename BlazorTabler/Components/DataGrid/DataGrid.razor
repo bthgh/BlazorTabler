@@ -1,0 +1,36 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<CascadingValue Value="@(this)" IsFixed="true">
+    @ChildContent
+</CascadingValue>
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @foreach (var item in dataGridItems)
+    {
+        <div class="datagrid-item">
+            <div class="datagrid-title">@item.Title</div>
+            <div class="datagrid-content">@item.ChildContent</div>
+        </div>
+    }
+</div>
+
+@code
+{
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+
+    private List<DataGridItem> dataGridItems = new();
+
+    private string Classes =>
+        string.Join(" ",
+                TablerClasses.DataGrid,
+                CssClass
+            )
+            .Trim();
+
+    internal void AddItem(DataGridItem item)
+    {
+        dataGridItems.Add(item);
+        StateHasChanged();
+    }
+}
