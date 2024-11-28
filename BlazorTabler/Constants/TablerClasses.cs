@@ -16,6 +16,8 @@ public static class TablerClasses
     
     //Avatar
     public const string Avatar = "avatar";
+    public const string AvatarList = "avatar-list";
+    public const string AvatarListStacked = "avatar-list-stacked";
     
     //Badge
     public const string Badge = "badge";
