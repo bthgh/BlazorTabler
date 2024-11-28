@@ -36,6 +36,7 @@ This project is under development.
 - Carousel
 - Charts
 - Color Picker
+- Data Grid
 - Colors
 - Dropdown
 - Flag
