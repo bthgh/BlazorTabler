@@ -1,0 +1,249 @@
+@page "/Charts"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+
+
+<PageHeader Title="Charts"/>
+<PageBody>
+<CardRow>
+<div class="col-lg-6">
+    <Card>
+        <CardHeader Title="Active users">
+            <CardActions>
+                <Dropdown>
+                    <DropdownButton CssClass="text-secondary">Last 7 days</DropdownButton>
+                    <DropdownMenu>
+                        <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                        <DropdownItem Href="#">Last 30 days</DropdownItem>
+                        <DropdownItem Href="#">Last 3 months</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+            </CardActions>
+        </CardHeader>
+        <CardBody> 
+            <div class="row">
+                <div class="col">
+                    <div id="chart-active-users-2"></div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="divide-y divide-y-fill">
+                        <div class="px-3">
+                            <div class="text-secondary">
+                                <span class="status-dot bg-primary"></span> Mobile
+                            </div>
+                            <div class="h2">11,425</div>
+                        </div>
+                        <div class="px-3">
+                            <div class="text-secondary">
+                                <span class="status-dot bg-azure"></span> Desktop
+                            </div>
+                            <div class="h2">6,458</div>
+                        </div>
+                        <div class="px-3">
+                            <div class="text-secondary">
+                                <span class="status-dot bg-green"></span> Tablet
+                            </div>
+                            <div class="h2">3,985</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-4">
+</div>
+<div class="col-12">
+    <Card>
+        <CardHeader Title="Social referrals">
+            <CardActions>
+                <Dropdown>
+                    <DropdownButton CssClass="text-secondary">Last 7 days</DropdownButton>
+                    <DropdownMenu>
+                        <DropdownItem Href="#" IsActive="true">Last 7 days</DropdownItem>
+                        <DropdownItem Href="#">Last 30 days</DropdownItem>
+                        <DropdownItem Href="#">Last 3 months</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+            </CardActions>
+        </CardHeader>
+        <CardBody>
+            <div id="chart-social-referrals"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-12">
+    <Card>
+        <CardBody>
+            <div id="chart-tasks-overview"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-demo-pie"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-2"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-3"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-4"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-5"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-6"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-7"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-8"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-9"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-10"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-completion-tasks-11"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-tasks"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-line-stroke"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-stepline"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-temperature"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-area"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-area-spline"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-area-spline-stacked"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-spline"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-scatter"></div>
+        </CardBody>
+    </Card>
+</div>
+<div class="col-lg-6 col-xl-4">
+    <Card>
+        <CardBody>
+            <div id="chart-combination"></div>
+        </CardBody>
+    </Card>
+</div>
+</CardRow>
+</PageBody>
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeChartPage");
+        }
+    }
+
+}
