@@ -1,0 +1,21 @@
+@page "/Error500"
+@using BlazorTabler.Client.Components.Layout
+@layout ErrorLayout
+
+<div class="empty">
+    <div class="empty-header">500</div>
+    <p class="empty-title">Oops… You just found an error page</p>
+    <p class="empty-subtitle text-secondary">
+        We are sorry but our server encountered an internal error
+    </p>
+    <div class="empty-action">
+        <NavLink href="/" class="btn btn-primary">
+            <SvgIcon Icon="TablerSvgIcons.arrow_left"/>
+            Take me home
+        </NavLink>
+    </div>
+</div>
+
+@code {
+    
+}
