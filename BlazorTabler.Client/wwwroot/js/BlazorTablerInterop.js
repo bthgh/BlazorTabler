@@ -2055,4 +2055,11 @@ function initializeChartPage()
         },
     })).render();
 }
+
+
+function initializeDropzonePage(){
+    new Dropzone("#dropzone-default");
+    new Dropzone("#dropzone-multiple");
+    new Dropzone("#dropzone-custom");
+}
  

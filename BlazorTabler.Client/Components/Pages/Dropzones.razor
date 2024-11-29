@@ -1,0 +1,59 @@
+@page "/Dropzones"
+@rendermode InteractiveServer
+@inject IJSRuntime JSRuntime
+
+<PageHeader Title="Dropzone"/>
+<PageBody>
+    <CardRow>
+        <div class="col-md-6">
+            <Card>
+                <CardBody>
+                    <CardTitle>Basic Usage</CardTitle>
+                    <form class="dropzone" id="dropzone-default" action="./" autocomplete="off" novalidate>
+                        <div class="fallback">
+                            <input name="file" type="file"  />
+                        </div>
+                    </form>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardBody>
+                    <CardTitle>Multiple File Upload</CardTitle>
+                    <form class="dropzone" id="dropzone-multiple" action="./" autocomplete="off" novalidate>
+                        <div class="fallback">
+                            <input name="file" type="file"  multiple  />
+                        </div>
+                    </form>
+                </CardBody>
+            </Card>
+        </div>
+        <div class="col-md-6">
+            <Card>
+                <CardBody>
+                    <CardTitle>Custom Dropzone</CardTitle>
+                    <form class="dropzone" id="dropzone-custom" action="./" autocomplete="off" novalidate>
+                        <div class="fallback">
+                            <input name="file" type="file"  />
+                        </div>
+                        <div class="dz-message">
+                            <h3 class="dropzone-msg-title">Your text here</h3>
+                            <span class="dropzone-msg-desc">Your custom description here</span>
+                        </div>
+                    </form>
+                </CardBody>
+            </Card>
+        </div>
+    </CardRow>
+</PageBody>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeDropzonePage");
+        }
+    }
+}
