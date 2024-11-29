@@ -257,22 +257,22 @@
                 Dropzone
                 <Badge BackgroundColor="TablerColors.Green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>
             </NavLink>
-            @* <div class="dropend"> *@
-            @*     <a class="dropdown-item dropdown-toggle" href="#sidebar-error" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false"> *@
-            @*         Error pages *@
-            @*     </a> *@
-            @*     <div class="dropdown-menu"> *@
-            @*         <a href="./error-404.html" class="dropdown-item"> *@
-            @*             404 page *@
-            @*         </a> *@
-            @*         <a href="./error-500.html" class="dropdown-item"> *@
-            @*             500 page *@
-            @*         </a> *@
-            @*         <a href="./error-maintenance.html" class="dropdown-item"> *@
-            @*             Maintenance page *@
-            @*         </a> *@
-            @*     </div> *@
-            @* </div> *@
+            <div class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#sidebar-error" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                    Error pages
+                </a>
+                <div class="dropdown-menu">
+                    <NavLink href="Error404" class="dropdown-item">
+                        404 page
+                    </NavLink>
+                    <NavLink href="Error500" class="dropdown-item">
+                        500 page
+                    </NavLink>
+                    <NavLink href="ErrorMaintenance" class="dropdown-item">
+                        Maintenance page
+                    </NavLink>
+                </div>
+            </div>
             <NavLink class="dropdown-item" href="Flags">
                 Flags
                 <Badge BackgroundColor="TablerColors.Green" Type="BadgeTypes.Light" CssClass="text-uppercase ms-auto">New</Badge>

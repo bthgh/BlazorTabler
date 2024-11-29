@@ -39,6 +39,8 @@ This project is under development.
 - Data Grid
 - Colors
 - Dropdown
+- Dropzone
+- Error Pages
 - Flag
 - Icon
 - Legend

@@ -1,0 +1,21 @@
+@page "/Error404"
+@using BlazorTabler.Client.Components.Layout
+@layout ErrorLayout
+
+<div class="empty">
+    <div class="empty-header">404</div>
+    <p class="empty-title">Oops… You just found an error page</p>
+    <p class="empty-subtitle text-secondary">
+        We are sorry but the page you are looking for was not found
+    </p>
+    <div class="empty-action">
+        <NavLink href="/" class="btn btn-primary">
+            <SvgIcon Icon="TablerSvgIcons.arrow_left"/>
+            Take me home
+        </NavLink>
+    </div>
+</div>
+
+@code {
+
+}
