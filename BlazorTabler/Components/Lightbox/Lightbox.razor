@@ -1,0 +1,28 @@
+@using System.Net.Mime
+@inherits TablerComponentBase
+@namespace BlazorTabler
+
+<div class="row row-cols-6 g-3">
+    @foreach (var item in Images)
+    {
+        <div class="col">
+            <a data-fslightbox="gallery" href="@item">
+                <!-- Photo -->
+                <div class="img-responsive img-responsive-1x1 rounded border" style="background-image: url(@item)"></div>
+            </a>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public List<string> Images { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JsRuntime.InvokeAsync<object>("LoadJs", "./libs/fslightbox/index.js");
+        }
+    }
+
+}

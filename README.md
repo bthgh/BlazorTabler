@@ -44,6 +44,7 @@ This project is under development.
 - Flag
 - Icon
 - Legend
+- Lightbox
 - Modal
 - Page
 - Placeholder
