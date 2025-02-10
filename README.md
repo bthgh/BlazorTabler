@@ -18,7 +18,7 @@ A premium and open source Blazor dashboard (.Net 8) with a responsive and high-q
 
 <a href="https://github.com/bthgh/BlazorTabler" target="_blank">BlazorTabler</a> is an implementation of the Tabler template with the.Net 8 Blazor App. All the template's components have been created with the reusable Blazor component in the separate Razor Class Library project. So you can easily connect and use the components to create a powerful Blazor dashboard for your application. The client project is a sample project that shows the use of all the BlazorTabler's components and full documentation for each component.
 
-<img src="https://raw.githubusercontent.com/tabler/tabler/dev/src/static/tabler-preview.png" alt="Tabler preview">
+<img src="https://github.com/bthgh/BlazorTabler/blob/160b19e9267476be0b78236d0e44c9416feafa39/Screenshot.png" alt="Tabler preview">
 
 
 ## 🚀 Notice
