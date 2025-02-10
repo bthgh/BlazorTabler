@@ -4,7 +4,7 @@ A premium and open source Blazor dashboard (.Net 8) with a responsive and high-q
 </p>
 
 <p align="center">
-<a href="https://preview.tabler.io" target="__blank"><img src="https://img.shields.io/static/v1?label=Demo&message=preview&color=228be6" alt="Tabler preview"></a>
+<a href="https://blazortabler.agilerefactoring.com/" target="__blank"><img src="https://img.shields.io/static/v1?label=Demo&message=preview&color=228be6" alt="Tabler preview"></a>
 <a href="https://github.com/bthgh/BlazorTabler/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/tabler.svg?label=License&message=MIT&color=1c7ed6" alt="License"></a>
 </p>
  
