@@ -1,0 +1,120 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+@{
+    var Tag = TagType?.ToLower() == "button" ? "button" : "a";
+}
+
+<@Tag @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" attributes="@AdditionalAttributes"
+href="@(Tag == "a" ? Href : null)"
+type="@(Tag == "button" ? ButtonType : null)"
+target="@(External ? "_blank" : null)"
+rel="@(External ? "noreferrer" : null)"
+data-bs-toggle="@ModalToggle"
+data-bs-target="@ModalTarget"
+aria-label="@(IconOnly ? Text ?? "Button" : null)"
+data-bs-dismiss="@(Dismiss ? "modal" : null)"
+>
+
+@if (Spinner)
+{
+    <Spinner size="sm" TagType="span" />
+}
+
+@if (Icon != null)
+{
+    <SvgIcon Icon="@((TablerSvgIcons)Icon)" Color="@IconColor"/>
+}
+
+@if (!IconOnly)
+{
+    @Text
+
+    @if (Dots)
+    {
+        <span class="animated-dots"></span>
+    }
+
+    @if (IconEnd != null)
+    {
+        <SvgIcon Icon="@((TablerSvgIcons)IconEnd)" CssClass="icon-end"/>
+    }
+}
+
+</@Tag>
+
+@code {
+    [Parameter] public string? Text { get; set; }
+    [Parameter] public TablerSvgIcons? Icon { get; set; }
+    [Parameter] public TablerSvgIcons? IconEnd { get; set; }
+    [Parameter] public string? IconColor { get; set; }
+
+    [Parameter] public string? Color { get; set; }
+    [Parameter] public bool Outline { get; set; }
+    [Parameter] public bool Ghost { get; set; }
+
+    [Parameter] public string? Size { get; set; }
+    [Parameter] public string? Height { get; set; }
+
+    [Parameter] public bool Disabled { get; set; }
+    [Parameter] public bool Square { get; set; }
+    [Parameter] public bool Block { get; set; }
+    [Parameter] public bool Pill { get; set; }
+    [Parameter] public bool Link { get; set; }
+    [Parameter] public bool IconOnly { get; set; }
+    [Parameter] public bool Dots { get; set; }
+    [Parameter] public bool Loading { get; set; }
+    [Parameter] public bool Spinner { get; set; }
+
+    // NAVIGATION
+    [Parameter] public string? Href { get; set; } = "#";
+    [Parameter] public bool External { get; set; }
+    [Parameter] public string TagType { get; set; } = "a"; 
+    [Parameter] public string? ButtonType { get; set; }   
+
+    // MODALS / TOASTS
+    [Parameter] public string? ModalId { get; set; }
+    [Parameter] public string? ToastId { get; set; }
+    [Parameter] public bool Dismiss { get; set; }  
+
+    
+    private string Classes =>
+        string.Join(" ",
+                "btn",
+                Height != null ? $"btn-{Height}" : null,
+                BuildColorClass(),
+                Disabled ? "disabled" : null,
+                Square ? "btn-square" : null,
+                Loading ? "btn-loading" : null,
+                Pill ? "btn-pill" : null,
+                Size != null ? $"btn-{Size}" : null,
+                Block ? "w-100" : null,
+                Link ? "btn-link" : null,
+                IconOnly ? "btn-icon" : null,
+                CssClass
+            )
+            .Trim();
+    
+   
+    private string? BuildColorClass()
+    {
+        if (string.IsNullOrWhiteSpace(Color))
+            return null;
+
+        if (Outline)
+            return $"btn-outline-{Color}";
+
+        if (Ghost)
+            return $"btn-ghost-{Color}";
+
+        return $"btn-{Color}";
+    }
+ 
+    private string? ModalToggle =>
+        ModalId != null ? "modal" :
+        ToastId != null ? "toast" : null;
+
+    private string? ModalTarget =>
+        ModalId != null ? $"#modal-{ModalId}" :
+        ToastId != null ? $"#toast-{ToastId}" : null;
+}

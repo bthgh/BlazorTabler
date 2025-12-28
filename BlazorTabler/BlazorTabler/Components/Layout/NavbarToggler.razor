@@ -1,0 +1,27 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.Layout
+
+<!-- BEGIN NAVBAR TOGGLER -->
+<button @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="MergedAttributes"
+        type="button" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<!-- END NAVBAR TOGGLER -->
+
+@code {
+    [Parameter] public string? Target { get; set; }
+    
+    private Dictionary<string, object> MergedAttributes =>
+        new(AdditionalAttributes ?? [])
+        {
+            ["data-bs-target"] = string.IsNullOrWhiteSpace(Target) ? null : $"#{Target}",
+            ["aria-controls"] = string.IsNullOrWhiteSpace(Target) ? null : Target
+        };
+    
+    private string Classes =>
+        string.Join(" ",
+                "navbar-toggler",
+                CssClass
+            )
+            .Trim();
+}

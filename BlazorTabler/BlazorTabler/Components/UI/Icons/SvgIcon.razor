@@ -1,0 +1,28 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+<svg xmlns="http://www.w3.org/2000/svg" class="@Classes" width="@Width" height="@Height" viewBox="@ViewBox" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    @((MarkupString)Icon.GetDescription())
+</svg>
+
+@code {
+    [Parameter] public required TablerSvgIcons Icon { get; set; }
+    [Parameter] public bool Filled { get; set; }
+    [Parameter] public bool Inline { get; set; }
+    [Parameter] public string? Color { get; set; }
+    [Parameter] public string? Size { get; set; }
+    [Parameter] public int Width { get; set; } = 24;
+    [Parameter] public int Height { get; set; } = 24;
+    [Parameter] public string? ViewBox { get; set; } = "0 0 24 24";
+
+    private string Classes =>
+        string.Join(" ",
+                "icon",
+                !string.IsNullOrWhiteSpace(Color) ? $"text-{Color}" : string.Empty,
+                Inline ? "icon-inline" : string.Empty,
+                !string.IsNullOrWhiteSpace(Color) ? $"icon-{Size}" : string.Empty,
+                CssClass
+            )
+            .Trim();
+
+}

@@ -1,0 +1,108 @@
+@* @using BlazorTabler.Models *@
+@* @inherits TablerComponentBase *@
+@* @inject IOptions<AppSettings> Settings *@
+@* @namespace BlazorTabler *@
+@* *@
+@* *@
+@* <div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes"> *@
+@* *@
+@* 	@if (!Condensed) *@
+@* 	{ *@
+@* 		<div class="nav-item d-none d-@Breakpoint-flex me-3"> *@
+@* 			<div class="btn-list"> *@
+@* 				<Button Icon="TablerSvgIcons.brand_github" Outline="true" Text="Source Code" href="@Settings.Value.GithubUrl" External="true"></Button> *@
+@* 				<Button Icon="TablerSvgIcons.heart" IconColor="pink" Outline="=true" Text="Sponsor" Href="@Settings.Value.GithubSponsorsUrl" External="true"></Button> *@
+@* 			</div> *@
+@* 		</div> *@
+@* 	} *@
+@* 	 *@
+@* 	<div class="d-none d-@Breakpoint-flex"> *@
+@* 		<div class="nav-item"> *@
+@* 			<a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" *@
+@* 				data-bs-placement="bottom"> *@
+@* 				<SvgIcon Icon="TablerSvgIcons.moon"/> *@
+@* 			</a> *@
+@* *@
+@* 			<a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" *@
+@* 				data-bs-placement="bottom"> *@
+@* 				<SvgIcon Icon="TablerSvgIcons.sun"/> *@
+@* 			</a> *@
+@* 		</div> *@
+@* 		<div class="nav-item dropdown d-none d-md-flex"> *@
+@* 			<a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications" data-bs-auto-close="outside" aria-expanded="false"> *@
+@* 				<SvgIcon Icon="TablerSvgIcons.bell"/> *@
+@* 				<span class="badge bg-red"></span> *@
+@* 			</a> *@
+@* 			<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card"> *@
+@* 				<NavbarNotifications/> *@
+@* 			</div> *@
+@* 		</div> *@
+@* *@
+@* 		<div class="nav-item dropdown d-none d-md-flex me-3"> *@
+@* 			<a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show app menu" data-bs-auto-close="outside" aria-expanded="false"> *@
+@* 				<SvgIcon Icon="TablerSvgIcons.apps"></SvgIcon> *@
+@* 			</a> *@
+@* 			<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-end dropdown-menu-card"> *@
+@* 				 *@
+@* 				{% include "cards/navbar-apps.html" %} *@
+@* 			</div> *@
+@* 		</div> *@
+@* 	</div> *@
+@* *@
+@* 	<div class="nav-item dropdown"> *@
+@* 		<a href="#" class="nav-link d-flex lh-1 p-0 px-2" data-bs-toggle="dropdown" aria-label="Open user menu"> *@
+@* 			{% include "ui/avatar.html" person-id=person-id size="sm" %} *@
+@* *@
+@* 			{% unless include.hide-username %} *@
+@* 			<div class="d-none d-xl-block ps-2"> *@
+@* 				<div>{{ person.full_name }}</div> *@
+@* 				<div class="mt-1 small text-secondary">{{ person.job_title }}</div> *@
+@* 			</div> *@
+@* 			{% endunless %} *@
+@* 		</a> *@
+@* 		<div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"{% if include.dark %} data-bs-theme="light"{% endif %}> *@
+@* 			<a href="#" class="dropdown-item">Status</a> *@
+@* 			<a href="{{ page | relative }}/profile.html" class="dropdown-item">Profile</a> *@
+@* 			<a href="#" class="dropdown-item">Feedback</a> *@
+@* 			<div class="dropdown-divider"></div> *@
+@* 			<a href="{{ page | relative }}/settings.html" class="dropdown-item">Settings</a> *@
+@* 			<a href="{{ page | relative }}/sign-in.html" class="dropdown-item">Logout</a> *@
+@* 		</div> *@
+@* 	</div> *@
+@* </div> *@
+@* *@
+@* *@
+@* @code { *@
+@* 	[Parameter] public int PersonId { get; set; } = 1; *@
+@* 	[Parameter] public required NavbarPerson Person { get; set; } *@
+@* 	[Parameter] public bool Condensed { get; set; } *@
+@* 	[Parameter] public string Breakpoint { get; set; } = "lg"; *@
+@* 	 *@
+@* 	 *@
+@* 	 *@
+@* 	private string Classes => *@
+@* 		string.Join(" ", *@
+@* 				"navbar-nav", *@
+@* 				"flex-row", *@
+@* 				CssClass *@
+@* 			) *@
+@* 			.Trim(); *@
+@* 	 *@
+@* 	  *@
+@* 	 *@
+@* 	 *@
+@* 	[Parameter] public bool HideUsername { get; set; } *@
+@* 	[Parameter] public bool Dark { get; set; } *@
+@* *@
+@* 	// URLs (instead of site.githubUrl, site.githubSponsorsUrl) *@
+@* 	[Parameter] public string GitHubUrl { get; set; } = "https://github.com"; *@
+@* 	[Parameter] public string GitHubSponsorsUrl { get; set; } = "https://github.com/sponsors"; *@
+@* *@
+@* 	// People data replacement for Jekyll's: {% assign person = people[person-id] %} *@
+@* 	 *@
+@* *@
+@* 	// Page-relative URLs *@
+@* 	[Parameter] public string ProfileUrl { get; set; } = "/profile"; *@
+@* 	[Parameter] public string SettingsUrl { get; set; } = "/settings"; *@
+@* 	[Parameter] public string SignOutUrl { get; set; } = "/sign-in"; *@
+@* } *@

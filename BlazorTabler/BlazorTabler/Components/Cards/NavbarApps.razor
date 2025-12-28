@@ -1,0 +1,46 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.Cards
+@using BlazorTabler.Data
+
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle"  @attributes="@AdditionalAttributes">
+    <div class="card-header">
+        <div class="card-title">My Apps</div>
+
+        <div class="card-actions btn-actions">
+            <a href="#" class="btn-action">
+                <SvgIcon Icon="TablerSvgIcons.settings"/>
+            </a>
+        </div>
+    </div>
+    <div class="card-body scroll-y p-2" style="max-height: 50vh">
+        <div class="row g-0">
+            @foreach (var brand in _brands)
+            {
+                <div class="col-4">
+                    <a href="#" class="d-flex flex-column flex-center text-center text-secondary py-2 px-2 link-hoverable">
+                        <img src="/static/brands/@brand.image" class="w-6 h-6 mx-auto mb-2" width="24" height="24" alt="">
+                        <span class="h5">@brand.name</span>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    
+    private List<dynamic> _brands;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _brands = Repository.GetBrands();
+    }
+    
+    private string Classes =>
+        string.Join(" ",
+                "card",
+                CssClass
+            )
+            .Trim();
+}

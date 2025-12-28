@@ -1,0 +1,41 @@
+@using BlazorTabler.Data
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @foreach (var person in _people)
+    {
+        <Avatar Person="person"
+                Size="@Size"        />
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Text))
+    {
+        <Avatar Placeholder="Text"
+                Size="@Size" />
+    }
+</div>
+
+@code {
+    [Parameter] public int Limit { get; set; } = 5;
+    [Parameter] public int Offset { get; set; } = 0;
+    [Parameter] public string Size { get; set; } = "sm";
+    [Parameter] public bool Stacked { get; set; }
+    [Parameter] public string? Text { get; set; }
+    
+    private List<dynamic> _people;
+      
+    private string Classes =>
+        string.Join(" ",
+                "avatar-list",
+                Stacked ? "avatar-list-stacked" : null,
+                CssClass
+            )
+            .Trim();
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _people = Repository.GetQuestions().Skip(Offset).Take(Limit).ToList();
+    }
+}

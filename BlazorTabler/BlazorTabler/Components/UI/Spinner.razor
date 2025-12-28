@@ -1,0 +1,28 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+
+@{
+    var Tag = TagType?.ToLower() ?? "div";
+}
+
+<@Tag @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" attributes="@AdditionalAttributes" role="status"></@Tag>
+
+@code {
+    [Parameter] public string TagType { get; set; } = "div";
+    [Parameter] public string Type { get; set; } = "border"; 
+    [Parameter] public string? Color { get; set; }
+    [Parameter] public string? Size { get; set; }
+    
+    
+    private string Classes =>
+        string.Join(" ",
+                $"spinner-{Type}",
+                !string.IsNullOrWhiteSpace(Color) 
+                    ? $"text-{Color}" : null,
+                !string.IsNullOrWhiteSpace(Size)
+                    ? $"spinner-{Type}-{Size}" : null,
+                CssClass
+            )
+            .Trim();
+}

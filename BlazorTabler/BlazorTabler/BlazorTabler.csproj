@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Components\Icons\SvgIcon.razor" />
+      <UpToDateCheckInput Remove="Components\Alerts\Alert.razor" />
+      <UpToDateCheckInput Remove="Components\UI\Cards\Activity.razor" />
+      <UpToDateCheckInput Remove="Components\UI\Cards\NavbarApps.razor" />
+      <UpToDateCheckInput Remove="Components\UI\Cards\NavbarNotifications.razor" />
+      <UpToDateCheckInput Remove="Components\UI\Parts\Activity.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\Cards\Activity.razor" />
+      <AdditionalFiles Include="Components\Cards\NavbarApps.razor" />
+      <AdditionalFiles Include="Components\Cards\NavbarNotifications.razor" />
+      <AdditionalFiles Include="Components\Parts\Activity.razor" />
+      <AdditionalFiles Include="Components\UI\Icons\SvgIcon.razor" />
+    </ItemGroup>
+
+</Project>

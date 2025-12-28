@@ -1,0 +1,128 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+ 
+<div @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes" role="alert">
+    <div class="alert-icon">
+        <SvgIcon Icon="ResolvedIcon" CssClass="alert-icon"/>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Description) || !string.IsNullOrWhiteSpace(List))
+    {
+        <div>
+            <h4 class="alert-heading">@Title</h4>
+            <div class="alert-description">
+                @Description
+                @if (ListItems.Any())
+                {
+                    <ul class="alert-list">
+                        @foreach (var item in ListItems)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        @Title
+        @if (!string.IsNullOrWhiteSpace(Action))
+        {
+            <a class="alert-action" @onclick="ActionHandleOnClick">@Action</a>
+        }
+        else if (!string.IsNullOrWhiteSpace(Link))
+        {
+            <a class="alert-link" @onclick="LinkHandleOnClick">@Link</a>
+        }
+    }
+    
+    @if (Buttons)
+    {
+        <div class="btn-list">
+            <a class="btn btn-@Type" @onclick="OkayHandleOnClick">Okay</a>
+            <a class="btn" @onclick="CancelHandleOnClick">Cancel</a>
+        </div>
+    }
+    
+    @if (ShowClose)
+    {
+        <a class="btn-close" data-bs-dismiss="alert" aria-label="close" @onclick="CloseHandleOnClick"></a>
+    }
+    
+</div>
+
+@code {
+    [Parameter] public TablerSvgIcons? Icon { get; set; }
+    [Parameter] public string Type { get; set; } = "success"; 
+    [Parameter] public bool Important { get; set; }
+    [Parameter] public bool Minor { get; set; }
+    [Parameter] public bool Avatar { get; set; }
+    [Parameter] public bool ShowClose { get; set; }
+    [Parameter] public bool Buttons { get; set; }
+    [Parameter] public string? Title { get; set; } = "This is a custom alert box!";
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public string? Action { get; set; }
+    [Parameter] public string? Link { get; set; }
+    [Parameter] public string? List { get; set; }
+    [Parameter] public EventCallback OnDismissed { get; set; }
+    [Parameter] public EventCallback OnActionClick { get; set; }
+    [Parameter] public EventCallback OnLinkClick { get; set; }
+    [Parameter] public EventCallback OnOkayClick { get; set; }
+    [Parameter] public EventCallback OnCancelClick { get; set; }
+    
+    private IEnumerable<string> ListItems =>
+        !string.IsNullOrWhiteSpace(List)
+            ? List.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+            : [];
+
+    private TablerSvgIcons ResolvedIcon =>
+        Icon ?? Type switch
+        {
+            "success" => TablerSvgIcons.check,
+            "warning" => TablerSvgIcons.alert_triangle,
+            "danger"  => TablerSvgIcons.alert_circle,
+            "info"    => TablerSvgIcons.info_circle,
+            _ => TablerSvgIcons.info_circle
+        };
+
+    private string Classes =>
+        string.Join(" ",
+            "alert",
+            Important 
+                ? "alert-important"
+                : Minor 
+                    ? "alert-minor"
+                    : string.Empty,
+            $"alert-{Type}",
+            ShowClose ? "alert-dismissible" : string.Empty,
+            Avatar ? "alert-avatar" : string.Empty,
+            CssClass
+        )
+        .Trim();
+    
+    private async Task CloseHandleOnClick()
+    {
+        await OnDismissed.InvokeAsync();
+    }
+    
+    private async Task ActionHandleOnClick()
+    {
+        await OnActionClick.InvokeAsync();
+    }
+
+    private async Task LinkHandleOnClick()
+    {
+        await OnLinkClick.InvokeAsync();
+    }
+    
+    private async Task OkayHandleOnClick()
+    {
+        await OnOkayClick.InvokeAsync();
+    }
+    
+    private async Task CancelHandleOnClick()
+    {
+        await OnCancelClick.InvokeAsync();
+    }
+}

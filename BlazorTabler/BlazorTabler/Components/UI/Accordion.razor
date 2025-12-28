@@ -1,0 +1,61 @@
+@using BlazorTabler.Data
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+  
+<div @ref="@Element" id="accordion-@Id" class="@Classes" style="@CssStyle" @attributes="@AdditionalAttributes">
+    @for (var index = 0; index < _questions.Count; index++)
+    {
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button @(index == 0 ? "" : "collapsed")" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-@index-@Id" aria-expanded="@(index == 0 ? "true" : "false")">
+                    @if (ShowIcon)
+                    {
+                        <div class="accordion-button-icon">
+                            <SvgIcon Icon="TablerSvgIcons.link"/>
+                        </div>
+                    }
+
+                    @_questions[index].question
+
+                    <div class="accordion-button-toggle accordion-button-toggle-plus">
+                        <SvgIcon Icon="@ToggleIcon"/>
+                    </div>
+                </button>
+            </div>
+            <div id="collapse-@index-@Id" class="accordion-collapse collapse @(index == 0 ? "show" : "")" data-bs-parent="#accordion-@Id">
+                <div class="accordion-body">
+                    @_questions[index].answer
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+    [Parameter] public int Count { get; set; } = 4;
+    [Parameter] public bool ShowIcon { get; set; }
+    [Parameter] public TablerSvgIcons ToggleIcon { get; set; } = TablerSvgIcons.chevron_down;
+    [Parameter] public string? Type { get; set; } 
+ 
+    private List<dynamic> _questions;
+
+    private string Classes =>
+        string.Join(" ",
+            "accordion",
+            string.IsNullOrWhiteSpace(Type)
+                ? ""
+                : string.Join(" ", Type.Split(',')
+                    .Select(t => $"accordion-{t.Trim()}")),
+                CssClass
+            )
+            .Trim();
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _questions = Repository.GetQuestions().Take(Count).ToList();
+    }
+
+}

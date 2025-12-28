@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BlazorTabler/BlazorTabler.Client/BlazorTabler.Client.csproj" />
+  <Project Path="BlazorTabler/BlazorTabler/BlazorTabler.csproj" />
+  <Project Path="BlazorTabler\BlazorTabler.Server\BlazorTabler.Server.csproj" />
+</Solution>

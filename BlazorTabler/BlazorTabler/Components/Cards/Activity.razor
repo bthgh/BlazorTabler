@@ -1,0 +1,25 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.Cards
+
+<div @ref="@Element" id="@Id" class="@Classes" style="@Styles" @attributes="@AdditionalAttributes">
+    <div class="card-body card-body-scrollable card-body-scrollable-shadow">
+        <Activity></Activity>
+    </div>
+</div>
+
+@code {
+    
+    private string Classes =>
+        string.Join(" ",
+                "card",
+                CssClass
+            )
+            .Trim();
+    
+    private string Styles =>
+        string.Join(" ",
+                "height: 28rem;",
+                CssStyle
+            )
+            .Trim();
+}

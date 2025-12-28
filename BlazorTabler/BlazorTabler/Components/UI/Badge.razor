@@ -1,0 +1,97 @@
+@using BlazorTabler.Data
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+<span @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" attributes="@AdditionalAttributes">
+    @if (Icon != null)
+    {
+        <SvgIcon Icon="@((TablerSvgIcons)Icon)"/>
+    }
+
+    @if (PersonId != null)
+    {
+        <span class="avatar"
+              style="@AvatarStyle">
+            @if (string.IsNullOrEmpty(_person.Photo))
+            {
+                @GetInitials(_person.FullName)
+            }
+        </span>
+    }
+
+    @if (!string.IsNullOrEmpty(Text))
+    {
+        @Text
+    }
+    else
+    {
+        @_person.FullName
+    }
+
+    @if (!string.IsNullOrEmpty(Addon))
+    {
+        <span class="badge-addon @AddonCssClass">
+            @Addon
+        </span>
+    }
+</span>
+
+
+@code {
+    [Parameter] public string? Scale { get; set; }
+    [Parameter] public string? Color { get; set; }
+    [Parameter] public bool Light { get; set; }
+    [Parameter] public TablerSvgIcons? Icon { get; set; }
+    [Parameter] public int? PersonId { get; set; }
+    [Parameter] public string? Text { get; set; }
+    [Parameter] public string? Addon { get; set; }
+    [Parameter] public string? AddonColor { get; set; }
+    
+    private List<dynamic> _people;
+    private dynamic _person;
+ 
+    private string Classes =>
+        string.Join(" ",
+                "badge",
+                Scale is not null ? $"badge-{Scale}" : null,
+                Color is not null
+                    ? $"bg-{Color}{(Light ? "-lt" : "")} text-{Color}{(Light ? "-lt" : "")}-fg"
+                    : null,
+                CssClass
+            )
+            .Trim();
+    
+    private string AvatarStyle =>
+        !string.IsNullOrEmpty(_person.Photo)
+            ? $"background-image: url('{_person.Photo}')"
+            : string.Empty;
+    
+    private string AddonCssClass =>
+        !string.IsNullOrEmpty(AddonColor)
+            ? $"bg-{AddonColor}"
+            : string.Empty;
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _people = Repository.GetQuestions().ToList();
+        
+        if (PersonId is > 0 && PersonId <= _people.Count)
+        {
+            _person = _people[PersonId.Value - 1];
+        }
+    }
+    
+    private static string GetInitials(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return string.Empty;
+
+        return string.Concat(
+            name.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Take(2)
+                .Select(p => char.ToUpperInvariant(p[0]))
+        );
+    }
+   
+}

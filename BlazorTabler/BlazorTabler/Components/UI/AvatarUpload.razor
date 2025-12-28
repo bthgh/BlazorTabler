@@ -1,0 +1,21 @@
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+<a href="#" @ref="@Element" id="@Id" class="@Classes" style="@CssStyle" attributes="@AdditionalAttributes">
+    <SvgIcon Icon="TablerSvgIcons.plus"/>
+</a>
+
+@code {
+    [Parameter] public string? Size { get; set; }
+    
+    private string Classes =>
+        string.Join(" ",
+                "avatar avatar-upload",
+                string.IsNullOrWhiteSpace(Size)
+                    ? ""
+                    : $"avatar-{Size}",
+                CssClass
+            )
+            .Trim();
+
+}

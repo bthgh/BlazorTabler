@@ -1,0 +1,162 @@
+@using BlazorTabler.Data
+@inherits TablerComponentBase
+@namespace BlazorTabler.UI
+
+
+
+@if (IsLink)
+{
+    <a @ref="@Element" id="@Id" class="@Classes" style="@Styles" attributes="@MergedAttributes">
+        @AvatarContent
+    </a>
+}
+else
+{
+    <span @ref="@Element" id="@Id" class="@Classes" style="@Styles" attributes="@MergedAttributes">
+        @AvatarContent
+    </span>
+}
+
+@code {
+    [Parameter] public string? Src { get; set; }
+    [Parameter] public string? Placeholder { get; set; }
+    [Parameter] public dynamic? Person { get; set; }
+    [Parameter] public int? PersonId { get; set; }
+    [Parameter] public List<dynamic>? People { get; set; }
+    [Parameter] public bool Link { get; set; }
+    [Parameter] public bool Dropdown { get; set; }
+    [Parameter] public string? Size { get; set; }
+    [Parameter] public bool Thumb { get; set; }
+    [Parameter] public string? Shape { get; set; }
+    [Parameter] public string? Color { get; set; }
+    [Parameter] public string? Status { get; set; }
+    [Parameter] public string? StatusText { get; set; }
+    [Parameter] public string? StatusIcon { get; set; }
+    [Parameter] public string? Brand { get; set; }
+    [Parameter] public string? Icon { get; set; }
+    
+    private bool IsLink => Link || Dropdown;
+    private string? ResolvedSrc;
+    private string? ResolvedPlaceholder;
+    
+    private string Classes =>
+        string.Join(" ",
+                "avatar",
+                Size is not null ? $"avatar-{Size}" : null,
+                Thumb ? "avatar-thumb" : null,
+                Shape,
+                CssClass,
+                Color is not null ? $"bg-{Color}-lt" : null
+            )
+            .Trim();
+    
+    private string Styles =>
+        string.Join(" ",
+                !string.IsNullOrWhiteSpace(ResolvedSrc)
+                    ? $"background-image: url('{ResolvedSrc}')"
+                    : null,
+                CssStyle
+            )
+            .Trim();
+        
+   
+    protected override async Task OnInitializedAsync()
+    {
+        People = Repository.GetPeople();
+
+        if (PersonId.HasValue && People is not null && PersonId > 0 && PersonId <= People.Count)
+        {
+            Person = People[PersonId.Value - 1];
+        }
+
+        if (Person is not null)
+        {
+            ResolvedSrc = Person.Photo;
+            ResolvedPlaceholder ??= string.IsNullOrWhiteSpace(ResolvedSrc)
+                ? GetInitials(Person.FullName)
+                : null;
+        }
+        else
+        {
+            ResolvedSrc = Src;
+            ResolvedPlaceholder = Placeholder;
+        }
+    }
+    
+    private static string GetInitials(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return string.Empty;
+
+        return string.Concat(
+            name.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Take(2)
+                .Select(p => char.ToUpperInvariant(p[0]))
+        );
+    }
+    
+    private Dictionary<string, object> MergedAttributes
+    {
+        get
+        {
+            var attrs = new Dictionary<string, object>(AdditionalAttributes ?? []);
+
+            if (Dropdown)
+            {
+                attrs["data-bs-toggle"] = "dropdown";
+            }
+
+            return attrs;
+        }
+    }
+    
+    private RenderFragment AvatarContent => builder =>
+    {
+        var seq = 0;
+
+        if (!string.IsNullOrEmpty(Status))
+        {
+            builder.OpenElement(seq++, "span");
+            builder.AddAttribute(seq++, "class", $"badge bg-{Status}");
+
+            if (!string.IsNullOrEmpty(StatusText))
+            {
+                builder.AddContent(seq++, StatusText);
+            }
+            else if (!string.IsNullOrEmpty(StatusIcon))
+            {
+                builder.OpenComponent<SvgIcon>(seq++);
+                builder.AddAttribute(seq++, "Icon", StatusIcon);
+                builder.AddAttribute(seq++, "Class", "avatar-status-icon");
+                builder.CloseComponent();
+            }
+
+            builder.CloseElement();
+        }
+
+        if (!string.IsNullOrEmpty(Brand))
+        {
+            builder.OpenElement(seq++, "span");
+            builder.AddAttribute(seq++, "class", "avatar-brand");
+            builder.AddAttribute(seq++, "style", $"background-image: url('/static/brands/{Brand}.svg')");
+            builder.CloseElement();
+        }
+
+        if (!string.IsNullOrEmpty(ResolvedSrc))
+        {
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(ResolvedPlaceholder))
+        {
+            builder.AddContent(seq++, ResolvedPlaceholder);
+        }
+        else
+        {
+            builder.OpenComponent<SvgIcon>(seq++);
+            builder.AddAttribute(seq++, "Icon", Icon ?? "user");
+            builder.AddAttribute(seq++, "Class", "avatar-icon");
+            builder.CloseComponent();
+        }
+    };
+}
