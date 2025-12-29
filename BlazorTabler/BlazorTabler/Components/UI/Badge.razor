@@ -1,3 +1,4 @@
+@using System.Dynamic
 @using BlazorTabler.Data
 @inherits TablerComponentBase
 @namespace BlazorTabler.UI
@@ -47,8 +48,8 @@
     [Parameter] public string? Addon { get; set; }
     [Parameter] public string? AddonColor { get; set; }
     
-    private List<dynamic> _people;
-    private dynamic _person;
+    private List<dynamic> _people = [];
+    private dynamic _person = new ExpandoObject();
  
     private string Classes =>
         string.Join(" ",

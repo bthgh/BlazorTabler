@@ -23,7 +23,7 @@
     [Parameter] public bool Stacked { get; set; }
     [Parameter] public string? Text { get; set; }
     
-    private List<dynamic> _people;
+    private List<dynamic> _people = [];
       
     private string Classes =>
         string.Join(" ",

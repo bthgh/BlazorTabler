@@ -39,7 +39,8 @@
     [Parameter] public TablerSvgIcons ToggleIcon { get; set; } = TablerSvgIcons.chevron_down;
     [Parameter] public string? Type { get; set; } 
  
-    private List<dynamic> _questions;
+    
+    private List<dynamic> _questions = [];
 
     private string Classes =>
         string.Join(" ",

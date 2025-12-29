@@ -36,8 +36,8 @@ else
     [Parameter] public string? Icon { get; set; }
     
     private bool IsLink => Link || Dropdown;
-    private string? ResolvedSrc;
-    private string? ResolvedPlaceholder;
+    private string? _resolvedSrc;
+    private string? _resolvedPlaceholder;
     
     private string Classes =>
         string.Join(" ",
@@ -52,8 +52,8 @@ else
     
     private string Styles =>
         string.Join(" ",
-                !string.IsNullOrWhiteSpace(ResolvedSrc)
-                    ? $"background-image: url('{ResolvedSrc}')"
+                !string.IsNullOrWhiteSpace(_resolvedSrc)
+                    ? $"background-image: url('{_resolvedSrc}')"
                     : null,
                 CssStyle
             )
@@ -71,15 +71,15 @@ else
 
         if (Person is not null)
         {
-            ResolvedSrc = Person.Photo;
-            ResolvedPlaceholder ??= string.IsNullOrWhiteSpace(ResolvedSrc)
+            _resolvedSrc = Person.Photo;
+            _resolvedPlaceholder ??= string.IsNullOrWhiteSpace(_resolvedSrc)
                 ? GetInitials(Person.FullName)
                 : null;
         }
         else
         {
-            ResolvedSrc = Src;
-            ResolvedPlaceholder = Placeholder;
+            _resolvedSrc = Src;
+            _resolvedPlaceholder = Placeholder;
         }
     }
     
@@ -142,14 +142,14 @@ else
             builder.CloseElement();
         }
 
-        if (!string.IsNullOrEmpty(ResolvedSrc))
+        if (!string.IsNullOrEmpty(_resolvedSrc))
         {
             return;
         }
 
-        if (!string.IsNullOrEmpty(ResolvedPlaceholder))
+        if (!string.IsNullOrEmpty(_resolvedPlaceholder))
         {
-            builder.AddContent(seq++, ResolvedPlaceholder);
+            builder.AddContent(seq++, _resolvedPlaceholder);
         }
         else
         {
